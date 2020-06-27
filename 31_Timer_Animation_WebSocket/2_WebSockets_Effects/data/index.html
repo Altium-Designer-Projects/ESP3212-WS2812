@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>INDEX</title>
+
+<script src="js/jquery-3.4.1.min.js"></script>
+<link rel="stylesheet" href="css/bulma.min.css">
+<link rel="stylesheet" href="css/colors.css">
+<link rel="icon" href="data:,">
+
+<style>
+
+.myBlack{
+  background-color:black;  /* #363636  is-dark */
+}
+
+.is-footer{
+ background-color:#57606f;
+ color:black; 
+}
+
+.navbar > .container {
+  align-items: stretch;
+  display: flex;
+  min-height: 3.25rem;
+  width: 100%;
+  vertical-align: middle;  
+}
+
+
+.content-left{
+  display:flex;
+  justify-content:flex-end; 
+  vertical-align: middle;
+  margin-left: auto;
+}
+
+.content-right{
+  display:flex;
+  justify-content:flex-start; 
+  vertical-align: middle;  
+  padding-left:1.2em;
+}
+
+
+@media screen and (max-width: 1024px){
+ .runButton{
+   padding-right:1.2em;
+ }
+ 
+ .logo{
+   padding-left:0.4em;
+ }
+
+}
+
+@media screen and (min-width: 1024px){
+ .runButton{
+   padding-right:0px;
+ }
+ 
+ .logo{
+   padding-left:0px;
+ }
+
+}
+
+.button.is-large.is-fullwidth.eButton{
+ margin-top:10px;
+ margin-bottom:10px;
+ margin-left:0px;
+ margin-right:0px; 
+ border :none; 
+ font-weight:700;
+}
+
+.eButton.onButton{
+ background-color:DeepSkyBlue;
+}
+
+.eButton.ofButton{
+ box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); 
+}
+
+@media screen and (max-width: 767px){
+ h1.bigText{
+  font-size:34px;
+  font-weight:500;
+  color:black;
+ }
+}
+
+@media screen and (min-width: 767px){
+ h1.bigText{
+  font-size:52px;
+  font-weight:700;
+  color:black;
+ }
+}
+
+.zemin{
+background-color:#D5D8DC;
+}
+
+.stopBtn{
+  font-weight:700;
+}
+
+</style>
+
+ 
+
+</head>  
+<body>
+	  
+<nav id="navbar" class="bd-navbar navbar is-fixed-top is-warning">
+  <div class="container">
+  
+	  <div class="navbar-item content-right">
+	   <p class="control logo">
+		 <a class="button is-medium is-black is-hidden-touch" href="https://www.altiumdesignerprojects.com" target="_blank"><strong>Altium Designer Projects</strong></a>
+		 <a class="button is-normal is-info is-hidden-desktop" href="https://www.altiumdesignerprojects.com" target="_blank"><strong>Altium Designer Projects</strong></a>
+	   </p>
+	  </div>
+  
+	  <div class="navbar-item content-left">
+		<p class="control runButton">
+			<button class="button is-medium is-black is-hidden-touch stopBtn">STOP</button>
+			<button class="button is-normal is-info is-hidden-desktop stopBtn">STOP</button>
+		</p>
+	  </div>
+  </div>
+</nav>
+	
+
+
+  <section class="section">
+    <hr style="background-color: white;">
+    <div class="container">
+
+	  <div class="content has-text-centered">
+		  <h1 class="bigText">
+			ESP32 WEBSOCKETS WS2812B PROJECT
+		  </h1>
+	  </div>
+      <hr style="background-color: white;">
+	  
+		<div class="columns">
+		   <div class="column">
+		   
+			<div class="tile is-ancestor">
+			  <div class="tile is-vertical is-8">
+				<div class="tile">
+				  <div class="tile is-parent is-vertical">
+					
+					<article class="tile is-child notification is-primary">  
+					  <p class="title">Effects</p>
+					  <p class="subtitle">With even more content</p>
+					  <div class="content">
+					  <!-- Content -->
+						<button class="button is-large is-fullwidth eButton" id="buttonEffects1" onclick="SocketSend21()">E</button> 
+						<button class="button is-large is-fullwidth eButton" id="buttonEffects2" onclick="SocketSend22()">E</button> 
+						<button class="button is-large is-fullwidth eButton" id="buttonEffects3" onclick="SocketSend23()">E</button> 					  
+					  </div>
+					</article>
+					
+					<article class="tile is-child notification is-info">
+					  <p class="title">Effects</p>
+					  <p class="subtitle">With even more content</p>
+					</article>
+					
+					<article class="tile is-child notification is-danger">
+					  <p class="title">Effects</p>
+					  <p class="subtitle">With even more content</p>
+					</article>
+				
+				  </div>
+				  
+				  <div class="tile is-parent">
+					<article class="tile is-child notification zemin">
+					  <p class="title">Effects</p>
+					  <p class="subtitle">With even more content</p>
+					  <div class="content">
+
+						<button class="button is-large is-fullwidth eButton ofButton">OTHERS</button> 
+						<button class="button is-large is-fullwidth eButton ofButton">OTHERS</button> 
+						<button class="button is-large is-fullwidth eButton ofButton">OTHERS</button>  
+						<button class="button is-large is-fullwidth eButton ofButton">OTHERS</button>  
+						<button class="button is-large is-fullwidth eButton ofButton">OTHERS</button> 						
+						<button class="button is-large is-fullwidth eButton ofButton">OTHERS</button> 						
+						<button class="button is-large is-fullwidth eButton ofButton">OTHERS</button> 					
+					  </div>
+					</article>
+				  </div>
+				</div>
+				<div class="tile is-parent">
+				  <article class="tile is-child notification is-danger" style="background-color:#6500FF;">
+			    
+
+				
+				  </article>
+				</div>
+			  </div>
+			  <div class="tile is-parent">
+				<article class="tile is-child notification is-black">
+				  <div class="content">
+					<p class="title">Effects</p>
+					<p class="subtitle">With even more content</p>
+					<div class="content">
+					  <!-- Content -->
+					<div class="content">
+					  	<button class="button is-large is-fullwidth btnColor colorRed" id="buttonRed" onclick="SocketSend1()">...</button><!-- RED  -->
+						<button class="button is-large is-fullwidth btnColor colorGreen" id="buttonGreen" onclick="SocketSend2()">...</button> <!-- GREEN  -->
+					  	<button class="button is-large is-fullwidth btnColor colorBlue" id="buttonBlue" onclick="SocketSend3()">...</button><!-- BLUE  -->
+
+						
+					</div>						
+					</div>
+				  </div>
+				</article>
+			  </div>
+			</div>
+
+		   </div>
+		</div>
+    </div>
+	
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      <strong>ESP32 Websockets WS2812B Project</strong> by <a href="https://www.tosyaelectronics.com/" target="_blank">Vedat Baloglu</a>.
+	  The source code is licensed<a href="http://opensource.org/licenses/mit-license.php"> MIT</a>.<br>
+	  The website content is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+    </p>
+  </div>
+</footer> 
+	
+</section>
+
+<script>  
+
+var buttonStatus0; /* stop */
+var buttonStatus1; // buttonRed
+var buttonStatus2; // buttonGreen
+var buttonStatus3; // buttonBlue
+var buttonStatus4; // buttonCyan
+var buttonStatus5; // buttonPlum 
+
+var buttonStatus6; // buttonCoral
+var buttonStatus7; // buttonPurple
+var buttonStatus8; // buttonYellow
+var buttonStatus9; // buttonSienna
+var buttonStatus10; // buttonMaroon
+
+var buttonStatus11; // buttonAmethyst
+var buttonStatus12; // buttonBlueViolet
+var buttonStatus13; // buttonDarkViolet
+var buttonStatus14; // buttonDarkOrange
+var buttonStatus15; // buttonDeepSkyBlue
+
+var buttonStatus16; // buttonSpringGreen
+var buttonStatus17; // buttonMediumOrchid
+var buttonStatus18; // buttonMidnightBlue
+var buttonStatus19; // buttonPaleVioletRed
+var buttonStatus20; // buttonMediumVioletRed
+
+var buttonStatus21; // Animation 1
+var buttonStatus22; // A2
+var buttonStatus23; // A3
+
+var url = 'ws://' + window.location.hostname + ':81/';
+
+function SocketInit(){    // This is called when the page finishes loading
+  wsConnect(url);         // Connect to WebSocket server
+  buttonGraphics();
+ 
+}
+
+function wsConnect(url){  // Call this to connect to the WebSocket server
+  websocket = new WebSocket(url);  // Connect to WebSocket server
+  // Assign callbacks
+  websocket.onopen    = function(event) { onOpen(event) };
+  websocket.onclose   = function(event) { onClose(event) };
+  websocket.onmessage = function(event) { onMessage(event) };
+  websocket.onerror   = function(event) { onError(event) };
+}
+
+function onOpen(event){             // Called when a WebSocket connection is established with the server
+  console.log("Connected");        // Log connection state
+}
+
+function onClose(event){             // Called when the WebSocket connection is closed
+  console.log("Disconnected");        // Log disconnection state
+  setTimeout(function() { wsConnect(url) }, 1000);       // Try to reconnect after a few seconds
+}
+
+function onMessage(event){   // Called when a message is received from the server
+  console.log("Received: " + event.data);
+
+   var obj = JSON.parse(event.data);
+  
+   if(obj.responseKey === "CLOSE"){ 
+      buttonGraphicsReset();
+      buttonGraphics();
+   }
+   
+   if(obj.responseKey === "RED"){ 
+      buttonGraphicsReset();
+      buttonStatus1 = true;
+      buttonGraphics();
+   }
+   
+   if(obj.responseKey === "GREEN"){ 
+      buttonGraphicsReset();
+      buttonStatus2 = true;
+      buttonGraphics();
+   }
+   
+   if(obj.responseKey === "BLUE"){ 
+      buttonGraphicsReset();
+	  buttonStatus3 = true;
+      buttonGraphics();
+   }
+
+  // diğerleri sonra eklenecek
+   
+   if(obj.responseKey === "APPLAUSE"){ 
+      buttonGraphicsReset();
+      buttonStatus21 = true;
+      buttonGraphics();
+   }
+   
+   if(obj.responseKey === "BEADS"){ 
+      buttonGraphicsReset();
+      buttonStatus22 = true;
+      buttonGraphics();
+   }
+   
+   if(obj.responseKey === "BEATWAVE"){ 
+      buttonGraphicsReset();
+	  buttonStatus23 = true;
+      buttonGraphics();
+   }
+  
+}
+
+function onError(event){      // Called when a WebSocket error occurs
+  console.log("ERROR: " + event.data);
+}
+
+window.addEventListener("load", SocketInit, false);  // Call the init function as soon as the page loads
+
+// ******************************************
+
+function SocketSend1(){
+ if(buttonStatus1 == false){
+    websocket.send("RED");  console.log("Sending: " + "RED-ON");
+ }else{
+    websocket.send("CLOSE"); console.log("Sending: " + "RED OFF >> CLOSE");
+ }
+}
+
+function SocketSend2(){
+ if(buttonStatus2 == false){
+    websocket.send("GREEN"); console.log("Sending: " + "GREEN-ON");
+ }else{
+    websocket.send("CLOSE"); console.log("Sending: " + "GREEN-OFF >> CLOSE"); 
+ }
+}
+
+function SocketSend3(){
+ if(buttonStatus3 == false){
+    websocket.send("BLUE");  console.log("Sending: " + "BLUE-ON");
+ }else{
+    websocket.send("CLOSE"); console.log("Sending: " + "BLUE-OFF >> CLOSE"); 
+ }
+}
+
+
+// diğerleri sonra
+/*
+
+
+
+
+
+
+*/
+
+function SocketSend21(){
+ if(buttonStatus21 == false){
+    websocket.send("APPLAUSE");   
+ }else{
+    websocket.send("CLOSE"); 
+ }
+}
+
+function SocketSend22(){
+ if(buttonStatus22 == false){
+    websocket.send("BEADS"); 
+ }else{
+    websocket.send("CLOSE");  
+ }
+}
+
+function SocketSend23(){
+ if(buttonStatus23 == false){
+    websocket.send("BEATWAVE");
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+
+
+
+
+/*   **********************     ********************     */
+function buttonGraphics(){
+ if(buttonStatus1 == true){
+   $("#buttonRed").addClass("onRed").removeClass("ofRed");
+   document.getElementById("buttonRed").innerHTML = "RED ON";
+ }else{
+   $("#buttonRed").addClass("ofRed").removeClass("onRed");
+   document.getElementById("buttonRed").innerHTML = "RED OFF";
+ }
+
+ if(buttonStatus2 == true){
+   $("#buttonGreen").addClass("onGreen").removeClass("ofGreen");  
+   document.getElementById("buttonGreen").innerHTML = "GREEN ON";
+ }else{
+   $("#buttonGreen").addClass("ofGreen").removeClass("onGreen");
+   document.getElementById("buttonGreen").innerHTML = "GREEN OFF";
+ }
+
+ if(buttonStatus3 == true){
+   $("#buttonBlue").addClass("onBlue").removeClass("ofBlue");
+   document.getElementById("buttonBlue").innerHTML = "BLUE ON";
+ }else{
+   $("#buttonBlue").addClass("ofBlue").removeClass("onBlue");
+   document.getElementById("buttonBlue").innerHTML = "BLUE OFF";
+ } 
+ 
+ // diğerleri 
+ /*
+ */
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ if(buttonStatus21 == true){
+   $("#buttonEffects1").addClass("onButton").removeClass("ofButton");
+   document.getElementById("buttonEffects1").innerHTML = "APPLAUSE";  // APPLAUSE ON
+ }else{
+   $("#buttonEffects1").addClass("ofButton").removeClass("onButton");
+   document.getElementById("buttonEffects1").innerHTML = "APPLAUSE";  // APPLAUSE OFF
+ }
+
+ if(buttonStatus22 == true){
+   $("#buttonEffects2").addClass("onButton").removeClass("ofButton");
+   document.getElementById("buttonEffects2").innerHTML = "BEADS";
+ }else{
+   $("#buttonEffects2").addClass("ofButton").removeClass("onButton");
+   document.getElementById("buttonEffects2").innerHTML = "BEADS";  // BEADS
+ }
+
+ if(buttonStatus23 == true){
+   $("#buttonEffects3").addClass("onButton").removeClass("ofButton");
+   document.getElementById("buttonEffects3").innerHTML = "BEATWAVE"; 
+ }else{
+   $("#buttonEffects3").addClass("ofButton").removeClass("onButton");
+   document.getElementById("buttonEffects3").innerHTML = "BEATWAVE"; // BEATWAVE
+ }
+
+
+
+ 
+} // button graphics son
+
+
+
+function buttonGraphicsReset(){
+  buttonStatus0 = false; /* stop */
+  buttonStatus1 = false; // buttonRed
+  buttonStatus2 = false; // buttonGreen
+  buttonStatus3 = false; // buttonBlue
+  buttonStatus4 = false; // buttonCyan
+  buttonStatus5 = false; // buttonPlum
+
+  buttonStatus6 = false; // buttonCoral
+  buttonStatus7 = false; // buttonPurple
+  buttonStatus8 = false; // buttonYellow
+  buttonStatus9 = false; // buttonSienna
+  buttonStatus10 = false; // buttonMaroon
+
+  buttonStatus11 = false; // buttonAmethyst
+  buttonStatus12 = false; // buttonBlueViolet
+  buttonStatus13 = false; // buttonDarkViolet
+  buttonStatus14 = false; // buttonDarkOrange
+  buttonStatus15 = false; // buttonDeepSkyBlue
+
+  buttonStatus16 = false; // buttonSpringGreen
+  buttonStatus17 = false; // buttonMediumOrchid
+  buttonStatus18 = false; // buttonMidnightBlue
+  buttonStatus19 = false; // buttonPaleVioletRed
+  buttonStatus20 = false; // buttonMediumVioletRed
+  
+  buttonStatus21 = false; //  APPLAUSE
+  buttonStatus22 = false; //  BEADS
+  buttonStatus23 = false; //  BEATWAVE
+
+}  
+
+
+</script> 
+</body>
+</html>
+
+
+
+
+
+
+
+
+

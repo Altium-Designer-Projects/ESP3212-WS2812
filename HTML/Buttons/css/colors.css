@@ -1,0 +1,358 @@
+
+.button.is-large.is-fullwidth.btnColor{
+ margin-top:10px;
+ margin-bottom:10px;
+ margin-left:0px;
+ margin-right:0px;
+ font-weight:700;
+
+}
+
+.btnColor.colorRed{
+  background-color: black; 
+  color: red;
+  border: 1px solid red;
+}
+
+.btnColor.colorRed.onRed{
+  background-color: red;
+  color: black;
+  border: 1px solid red;  
+}
+
+
+.btnColor.colorRed.ofRed{
+  background-color: black;
+  color: red;
+  border: 1px solid red;  
+}
+
+
+/************************/
+.btnColor.colorBlue{
+  background-color: black; 
+  color: blue;
+  border: 1px solid blue;
+}
+
+.btnColor.colorBlue.onBlue{
+  background-color: blue;
+  color: black;
+  border: 1px solid blue;  
+}
+
+
+.btnColor.colorBlue.ofBlue{
+  background-color: black;
+  color: blue;
+  border: 1px solid blue;  
+}
+
+/************************/
+.btnColor.colorGreen{
+  background-color: black; 
+  color: green;
+  border: 1px solid green;
+}
+
+.btnColor.colorGreen.onGreen {
+  background-color: green;
+  color: black;
+  border: 1px solid green;  
+}
+
+.btnColor.colorGreen.ofGreen {
+  background-color: black;
+  color: green;
+  border: 1px solid green;  
+}
+
+/************************/
+.btnColor.colorBlue{
+  background-color: black; 
+  color: blue;
+  border: 1px solid blue;
+}
+
+.btnColor.colorBlue.onBlue {
+  background-color: blue;
+  color: black;
+  border: 1px solid blue;  
+}
+
+.btnColor.colorBlue.ofBlue {
+  background-color: black;
+  color: blue;
+  border: 1px solid blue;  
+}
+
+
+/************************/
+.btnColor.colorYellow{
+  background-color: black; 
+  color:rgb(255, 255, 0);
+  border: 1px solid rgb(255, 255, 0);
+}
+
+.btnColor.colorYellow.onYellow{
+  background-color: rgb(255, 255, 0);
+  color: black;
+  border: 1px solid rgb(255, 255, 0);  
+}
+
+.btnColor.colorYellow.ofYellow {
+  background-color: black;
+  color: rgb(255, 255, 0);
+  border: 1px solid rgb(255, 255, 0);  
+}
+            
+
+/************************ Teal  * **********/ 
+background-color: #92a8d1;
+
+.btnColor.colorTeal{
+  background-color: black; 
+  color:Teal;
+  border: 1px solid Teal;
+}
+
+.btnColor.colorTeal.onTeal{
+  background-color: Teal;
+  color: black;
+  border: 1px solid Teal;
+}
+
+.btnColor.colorTeal.ofTeal {
+  background-color: black;
+  color:Teal;
+  border: 1px solid Teal;
+}
+
+/************************ Purple  * **********/  
+
+.btnColor.colorPurple{
+  background-color: black; 
+  color:Purple;
+  border: 1px solid Purple;
+}
+
+.btnColor.colorPurple.onPurple{
+  background-color: Purple;
+  color: black;
+  border: 1px solid Purple;
+}
+
+.btnColor.colorPurple.ofPurple {
+  background-color: black;
+  color:Purple;
+  border: 1px solid Purple;
+}
+
+/************************ Plum  * **********/  
+
+.btnColor.colorPlum{
+  background-color: black; 
+  color:Plum;
+  border: 1px solid Plum;
+}
+
+.btnColor.colorPlum.onPlum{
+  background-color: Plum;
+  color: black;
+  border: 1px solid Plum;
+}
+
+.btnColor.colorPlum.ofPlum{
+  background-color: black;
+  color:Plum;
+  border: 1px solid Plum;
+}
+
+/************************ Magenta  * **********/  
+
+.btnColor.colorMagenta{
+  background-color: black; 
+  color:Magenta;
+  border: 1px solid Magenta;
+}
+
+.btnColor.colorMagenta.onMagenta{
+  background-color: Magenta;
+  color: black;
+  border: 1px solid Magenta;
+}
+
+.btnColor.colorMagenta.ofMagenta{
+  background-color: black;
+  color:Magenta;
+  border: 1px solid Magenta;
+}
+
+/************************ Indigo  * **********/  
+
+.btnColor.colorIndigo{
+  background-color: black; 
+  color:Indigo;
+  border: 1px solid Indigo;
+}
+
+.btnColor.colorIndigo.onIndigo{
+  background-color: Indigo;
+  color: black;
+  border: 1px solid Indigo;
+}
+
+.btnColor.colorIndigo.ofIndigo{
+  background-color: black;
+  color:Indigo;
+  border: 1px solid Indigo;
+}
+
+/************************ Navy  * **********/  
+
+.btnColor.colorNavy{
+  background-color: black; 
+  color:Navy;
+  border: 1px solid Navy;
+}
+
+.btnColor.colorNavy.onNavy{
+  background-color: Navy;
+  color: black;
+  border: 1px solid Navy;
+}
+
+.btnColor.colorNavy.ofNavy{
+  background-color: black;
+  color:Navy;
+  border: 1px solid Navy;
+}
+
+/************************ PaleVioletRed  * **********/  
+
+.btnColor.colorPaleVioletRed{
+  background-color: black; 
+  color:PaleVioletRed;
+  border: 1px solid PaleVioletRed;
+}
+
+.btnColor.colorPaleVioletRed.onPaleVioletRed{
+  background-color: PaleVioletRed;
+  color: black;
+  border: 1px solid PaleVioletRed;
+}
+
+.btnColor.colorPaleVioletRed.ofPaleVioletRed{
+  background-color: black;
+  color:PaleVioletRed;
+  border: 1px solid PaleVioletRed;
+}
+
+/************************ SpringGreen  * **********/  
+
+.btnColor.colorSpringGreen{
+  background-color: black; 
+  color:SpringGreen;
+  border: 1px solid SpringGreen;
+}
+
+.btnColor.colorSpringGreen.onSpringGreen{
+  background-color: SpringGreen;
+  color: black;
+  border: 1px solid SpringGreen;
+}
+
+.btnColor.colorSpringGreen.ofSpringGreen{
+  background-color: black;
+  color:SpringGreen;
+  border: 1px solid SpringGreen;
+}
+
+/************************ MediumVioletRed  * **********/  
+
+.btnColor.colorMediumVioletRed{
+  background-color: black; 
+  color:MediumVioletRed;
+  border: 1px solid MediumVioletRed;
+}
+
+.btnColor.colorMediumVioletRed.onMediumVioletRed{
+  background-color: MediumVioletRed;
+  color: black;
+  border: 1px solid MediumVioletRed;
+}
+
+.btnColor.colorMediumVioletRed.ofMediumVioletRed{
+  background-color: black;
+  color:MediumVioletRed;
+  border: 1px solid MediumVioletRed;
+}
+
+/************************ DeepSkyBlue  * **********/  
+
+.btnColor.colorDeepSkyBlue{
+  background-color: black; 
+  color:DeepSkyBlue;
+  border: 1px solid DeepSkyBlue;
+}
+
+.btnColor.colorDeepSkyBlue.onDeepSkyBlue{
+  background-color: DeepSkyBlue;
+  color: black;
+  border: 1px solid DeepSkyBlue;
+}
+
+.btnColor.colorDeepSkyBlue.ofDeepSkyBlue{
+  background-color: black;
+  color:DeepSkyBlue;
+  border: 1px solid DeepSkyBlue;
+}
+
+/************************ BlueViolet  * **********/  
+
+.btnColor.colorBlueViolet{
+  background-color: black; 
+  color:BlueViolet;
+  border: 1px solid BlueViolet;
+}
+
+.btnColor.colorBlueViolet.onBlueViolet{
+  background-color: BlueViolet;
+  color: black;
+  border: 1px solid BlueViolet;
+}
+
+.btnColor.colorBlueViolet.ofBlueViolet{
+  background-color: black;
+  color:BlueViolet;
+  border: 1px solid BlueViolet;
+}
+
+/************************ DeepPink  * **********/  
+
+.btnColor.colorDeepPink{
+  background-color: black; 
+  color:DeepPink;
+  border: 1px solid DeepPink;
+}
+
+.btnColor.colorDeepPink.onDeepPink{
+  background-color: DeepPink;
+  color: black;
+  border: 1px solid DeepPink;
+}
+
+.btnColor.colorDeepPink.ofDeepPink{
+  background-color: black;
+  color:DeepPink;
+  border: 1px solid DeepPink;
+}
+
+
+
+
+
+
+
+
+

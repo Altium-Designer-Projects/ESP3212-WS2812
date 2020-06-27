@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>INDEX</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+<link rel="stylesheet" href="colors.css">
+
+<style>
+
+.myBlack{
+  background-color:black;  /* #363636  is-dark */
+}
+
+.is-footer{
+ background-color:#57606f;
+ color:black; 
+}
+
+.navbar > .container {
+  align-items: stretch;
+  display: flex;
+  min-height: 3.25rem;
+  width: 100%;
+  vertical-align: middle;  
+}
+
+
+.content-left{
+  display:flex;
+  justify-content:flex-end; 
+  vertical-align: middle;
+  margin-left: auto;
+}
+
+.content-right{
+  display:flex;
+  justify-content:flex-start; 
+  vertical-align: middle;  
+  padding-left:1.2em;
+}
+
+
+@media screen and (max-width: 1024px){
+ .runButton{
+   padding-right:1.2em;
+ }
+ 
+ .logo{
+   padding-left:0.4em;
+ }
+
+}
+
+@media screen and (min-width: 1024px){
+ .runButton{
+   padding-right:0px;
+ }
+ 
+ .logo{
+   padding-left:0px;
+ }
+
+}
+
+.button.is-large.is-fullwidth.eButton{
+ margin-top:10px;
+ margin-bottom:10px;
+ border :none; 
+}
+
+.eButton.onButton{
+ background-color:#ABB2B9;
+}
+
+
+.eButton.ofButton{
+ box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); 
+}
+
+@media screen and (max-width: 767px){
+ h1.bigText{
+  font-size:34px;
+  font-weight:500;
+  color:black;
+ }
+}
+
+@media screen and (min-width: 767px){
+ h1.bigText{
+  font-size:52px;
+  font-weight:700;
+  color:black;
+ }
+}
+
+</style>
+
+<script>  
+function test(){
+
+var x = 0;
+$(document).ready(function(){
+  $(window).resize(function(){
+	windowsInnerWidth();
+    $(".resizeSpan").text(x += 1);
+	 
+  });
+});
+
+function windowsInnerWidth(){
+  var w = window.innerWidth;
+  var h = window.innerHeight;
+  document.getElementById("windowWrite").innerHTML = "Width: " + w + "<br>Height: " + h;
+}
+
+}
+</script>  
+
+</head>  
+<body onload="test()">
+	  
+<nav id="navbar" class="bd-navbar navbar is-fixed-top is-warning">
+  <div class="container">
+  
+	  <div class="navbar-item content-right">
+	   <p class="control logo">
+		 <a class="button is-medium is-black is-hidden-touch" href="https://www.altiumdesignerprojects.com" target="_blank"><strong>Altium Designer Projects</strong></a>
+		 <a class="button is-normal is-info is-hidden-desktop" href="https://www.altiumdesignerprojects.com" target="_blank"><strong>Altium Designer Projects</strong></a>
+	   </p>
+	  </div>
+  
+	  <div class="navbar-item content-left">
+		<p class="control runButton">
+			<button class="button is-medium is-black is-hidden-touch"><strong>STOP</strong></button>
+			<button class="button is-normal is-info is-hidden-desktop"><strong>STOP</strong></button>
+		</p>
+	  </div>
+  </div>
+</nav>
+	
+
+
+  <section class="section">
+    <hr style="background-color: white;">
+    <div class="container">
+
+	  <div class="content has-text-centered">
+		  <h1 class="bigText">
+			ESP32 WEBSOCKETS WS2812B PROJECT
+		  </h1>
+	  </div>
+      <hr style="background-color: white;">
+	  
+		<div class="columns">
+		   <div class="column">
+		   
+			<div class="tile is-ancestor">
+			  <div class="tile is-vertical is-8">
+				<div class="tile">
+				  <div class="tile is-parent is-vertical">
+					
+					<article class="tile is-child notification is-primary">  
+					  <p class="title">Effects</p>
+					  <p class="subtitle">With even more content</p>
+					  <div class="content">
+					  <!-- Content -->
+						<button class="button is-large is-fullwidth eButton ofButton"><strong>APPLAUSE</strong></button> 
+						<button class="button is-large is-fullwidth eButton ofButton"><strong>BEADS</strong></button> 
+						<button class="button is-large is-fullwidth eButton ofButton"><strong>BEATWAVE</strong></button> 
+						<button class="button is-large is-fullwidth eButton ofButton"><strong>CHESSBOARD</strong></button> 
+						<button class="button is-large is-fullwidth eButton ofButton"><strong>CONFETTI</strong></button> 
+
+					  </div>
+					  
+					</article>
+					
+					<article class="tile is-child notification is-warning">
+					  <div class="content">
+					  <!-- Content -->
+						<button class="button is-large is-fullwidth eButton ofButton"><strong>CYLON</strong></button> 
+						<button class="button is-large is-fullwidth eButton ofButton"><strong>DISCO BALL</strong></button> 
+						<button class="button is-large is-fullwidth eButton ofButton"><strong>DOT BEAT</strong></button> 
+						<button class="button is-large is-fullwidth eButton ofButton"><strong>DROPS</strong></button> 
+						
+					  </div>					  
+					</article>
+					
+					<article class="tile is-child notification is-danger">
+					  <div class="content">
+					  <!-- Content -->
+					  <button class="button is-large is-fullwidth eButton ofButton"><strong>FADE PALETTE</strong></button> 
+						<button class="button is-large is-fullwidth eButton ofButton"><strong>FLASH</strong></button> 
+						<button class="button is-large is-fullwidth eButton ofButton"><strong>GRADIENT</strong></button> 
+						<button class="button is-large is-fullwidth eButton ofButton"><strong>HEART BEAT</strong></button> 
+						
+					  </div>						  
+					</article>
+					
+					
+				  </div>
+				  
+				  <div class="tile is-parent">
+					<article class="tile is-child notification is-info">
+					  <p class="title">Effects</p>
+					  <p class="subtitle">With even more content</p>
+					  <div class="content">
+					  <!-- Content -->
+					  <button class="button is-large is-fullwidth eButton ofButton"><strong>HSV COLORS</strong></button> 
+						<button class="button is-large is-fullwidth eButton ofButton"><strong>JUGGLE</strong></button> 
+						<button class="button is-large is-fullwidth eButton ofButton"><strong>LAV WAVE</strong></button> 					  
+						<button class="button is-large is-fullwidth eButton ofButton"><strong>METEOR</strong></button> 						
+						<button class="button is-large is-fullwidth eButton ofButton"><strong>MOVER</strong></button> 						
+						<button class="button is-large is-fullwidth eButton ofButton"><strong>MOVING COLORS</strong></button> 					  
+						<button class="button is-large is-fullwidth eButton ofButton"><strong>NOISE</strong></button> 
+						<button class="button is-large is-fullwidth eButton ofButton"><strong>OCEAN</strong></button> 
+						<button class="button is-large is-fullwidth eButton ofButton"><strong>OVERLAY</strong></button> 
+						<button class="button is-large is-fullwidth eButton ofButton"><strong>CROSS-FADE</strong></button> 
+						<button class="button is-large is-fullwidth eButton ofButton"><strong>PARTY WAVE</strong></button> 
+						<button class="button is-large is-fullwidth eButton ofButton"><strong>RAINBOW</strong></button> 
+						<button class="button is-large is-fullwidth eButton ofButton"><strong>SINELON</strong></button> 
+						<button class="button is-large is-fullwidth eButton ofButton"><strong>SNOWFALL</strong></button> 						
+						<button class="button is-large is-fullwidth eButton ofButton"><strong>SPARKLE</strong></button> 						
+						<button class="button is-large is-fullwidth eButton ofButton"><strong>VOLCANO</strong></button> 						
+						<button class="button is-large is-fullwidth eButton ofButton"><strong>WIZARD</strong></button> 
+
+					  </div>
+					</article>
+				  </div>
+				</div>
+				<div class="tile is-parent">
+				  <article class="tile is-child notification is-danger" style="background-color:#6500FF;">
+			    
+
+				
+				  </article>
+				</div>
+			  </div>
+			  <div class="tile is-parent">
+				<article class="tile is-child notification is-black">
+				  <div class="content">
+					<p class="title">Effects</p>
+					<p class="subtitle">With even more content</p>
+			
+					<div class="content">
+							<button class="button is-large is-fullwidth btnColor colorRed onRed" id="buttonRed"><strong>RED ON</strong></button>
+							<button class="button is-large is-fullwidth btnColor colorGreen onGreen" id="buttonGreen"><strong>GREEN ON</strong></button>
+							<button class="button is-large is-fullwidth btnColor colorBlue onBlue" id="buttonBlue"><strong>BLUE ON</strong></button>
+							<button class="button is-large is-fullwidth btnColor colorCyan onCyan" id="buttonCyan"><strong>CYAN ON</strong></button> 
+							<button class="button is-large is-fullwidth btnColor colorPlum onPlum" id="buttonPlum"><strong>PLUM ON</strong></button>
+							
+					
+							<button class="button is-large is-fullwidth btnColor colorCoral onCoral" id="buttonCoral"><strong>CORAL ON</strong></button>
+							<button class="button is-large is-fullwidth btnColor colorPurple onPurple" id="buttonPurple"><strong>PURPLE ON</strong></button>
+							<button class="button is-large is-fullwidth btnColor colorYellow onYellow" id="buttonYellow"><strong>YELLOW ON</strong></button>
+							<button class="button is-large is-fullwidth btnColor colorSienna onSienna" id="buttonSienna"><strong>SIENNA ON</strong></button>
+							<button class="button is-large is-fullwidth btnColor colorMaroon onMaroon" id="buttonMaroon"><strong>MAROON ON</strong></button>
+			
+							<button class="button is-large is-fullwidth btnColor colorAmethyst onAmethyst" id="buttonAmethyst"><strong>AMETHYST ON</strong></button>
+							<button class="button is-large is-fullwidth btnColor colorBlueViolet onBlueViolet" id="buttonBlueViolet"><strong>BLUE VIOLET ON</strong></button>	
+							<button class="button is-large is-fullwidth btnColor colorDarkViolet onDarkViolet" id="buttonDarkViolet"><strong>DARK VIOLET ON</strong></button>
+							<button class="button is-large is-fullwidth btnColor colorDarkOrange onDarkOrange" id="buttonDarkOrange"><strong>DARK ORANGE ON</strong></button>
+							<button class="button is-large is-fullwidth btnColor colorDeepSkyBlue onDeepSkyBlue" id="buttonDeepSkyBlue"><strong>DEEP SKY BLUE ON</strong></button>	
+							
+					     	<button class="button is-large is-fullwidth btnColor colorSpringGreen onSpringGreen" id="buttonSpringGreen"><strong>SPRING GREEN ON</strong></button>
+							<button class="button is-large is-fullwidth btnColor colorMediumOrchid onMediumOrchid" id="buttonMediumOrchid"><strong>MEDIUM ORCHID ON</strong></button>
+							<button class="button is-large is-fullwidth btnColor colorMidnightBlue onMidnightBlue" id="buttonMidnightBlue"><strong>MIDNIGHT BLUE ON</strong></button> 
+							<button class="button is-large is-fullwidth btnColor colorPaleVioletRed onPaleVioletRed" id="buttonPaleVioletRed"><strong>PALE VIOLET RED ON</strong></button>
+							<button class="button is-large is-fullwidth btnColor colorMediumVioletRed onMediumVioletRed" id="buttonMediumVioletRed"><strong>MEDIUM VIOLET RED ON</strong></button>
+					</div>			
+				
+				  </div>
+				</article>
+			  </div>
+			</div>
+
+		   </div>
+		</div>
+    </div>
+	
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      <strong>ESP32 Websockets WS2812B Project</strong> by <a href="https://www.tosyaelectronics.com/" target="_blank">Vedat Baloglu</a>.
+	  The source code is licensed<a href="http://opensource.org/licenses/mit-license.php"> MIT</a>.<br>
+	  The website content is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+    </p>
+  </div>
+</footer> 
+	
+</section>
+
+<script>
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

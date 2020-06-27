@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MENU</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<style>
+.tile.is-child.notification.silinecek {
+ height:50px;
+}
+
+.button.is-large.is-fullwidth.btnColor{
+ margin-top:10px;
+ margin-bottom:10px;
+ margin-left:0px;
+ margin-right:0px;
+
+}
+
+.button.is-black{
+ margin:5px;
+}
+
+.btnColor.colorRed{
+  background-color: black; 
+  color: red;
+  border: 1px solid red;
+}
+
+.btnColor.colorRed.onRed{
+  background-color: red;
+  color: white;
+  border: 1px solid red;  
+}
+
+.btnColor.colorRed.ofRed{
+  background-color: black;
+  color: red;
+  border: 1px solid red;  
+}
+
+
+/***************************************/
+.btnColor.colorBlue{
+  background-color: black; 
+  color: blue;
+  border: 1px solid blue;
+}
+
+.btnColor.colorBlue.onBlue{
+  background-color: blue;
+  color: white;
+  border: 1px solid blue;  
+}
+
+.btnColor.colorBlue.ofBlue{
+  background-color: black;
+  color: blue;
+  border: 1px solid blue;  
+}
+
+/**************************/
+
+.btnColor.colorGreen{
+  background-color: black; 
+  color: green;
+  border: 1px solid green;
+}
+
+.btnColor.colorGreen.onGreen {
+  background-color: green;
+  color: white;
+  border: 1px solid green;  
+}
+
+.btnColor.colorGreen.ofGreen {
+  background-color: black;
+  color: green;
+  border: 1px solid green;  
+}
+
+
+</style>
+
+</head>
+<body onload="start()">
+<hr>
+  
+  <section class="section">
+    <div class="container">
+		<div class="columns">
+		   <div class="column">
+		   
+			  <div class="tile is-ancestor">
+			  <div class="tile is-vertical is-8">
+				<div class="tile">
+				  <div class="tile is-parent is-vertical">
+					<article class="tile is-child notification is-primary">
+					<h4 class="title is-1" id="jsonResponse1">RSP</h4>
+					<h4 class="title is-1" id="jsonResponse2">RSP</h4>
+					<h4 class="title is-1" id="jsonResponse3">RSP</h4>
+					</article>
+				  </div>
+				  
+				  <div class="tile is-parent">
+					<article class="tile is-child notification is-info">
+					  <p class="title">removeClass</p>
+					  <div class="content">
+						<div class="buttons">
+						  <button class="button is-black pd">---</button>
+						  <button class="button is-black pd">---</button>
+						  <button class="button is-black pd">---</button>
+						  <button class="button is-black pd">---</button>						  
+						</div>
+					  
+					  </div>
+					</article>
+				  </div>
+				</div>
+				<div class="tile is-parent">
+				  <article class="tile is-child notification is-dark">	  </article>
+				</div>
+			  </div>
+			  <div class="tile is-parent">
+				<article class="tile is-child notification is-black">
+				  <div class="content">
+					<p class="title">Effects</p>
+					<p class="subtitle">With even more content</p>
+					<div class="content">
+
+					  	<button class="button is-large is-fullwidth btnColor colorRed" id="buttonRed" onclick="btnRedOnOff()">...</button>
+                        <button class="button is-large is-fullwidth btnColor colorBlue" id="buttonBlue" onclick="btnBlueOnOff()">...</button>
+						<button class="button is-large is-fullwidth btnColor colorGreen" id="buttonGreen" onclick="btnGreenOnOff()">...</button>
+						
+						<button class="button is-large is-fullwidth btnColor">Large</button>  
+						<button class="button is-large is-fullwidth btnColor">Large</button>
+						
+					</div>
+				  </div>
+				</article>
+			  </div>
+			</div>
+
+		   </div>
+		</div>
+    </div>
+  </section>
+
+<!-- ************************************************* -->
+<script>
+
+var statusRed = false;
+var statusBlue = false;
+var statusGreen = false;
+
+function start(){
+ graphicsColorButtons();
+}
+
+var jsButtonRed = document.getElementById("buttonRed");
+var jsButtonGreen = document.getElementById("buttonGreen");
+var jsButtonBlue = document.getElementById("buttonBlue");
+var jsResponse1 = document.getElementById("jsonResponse1");
+var jsResponse2 = document.getElementById("jsonResponse2");
+var jsResponse3 = document.getElementById("jsonResponse3");
+
+function graphicsColorButtons(){ 
+/*
+$(function(){
+
+});
+*/
+ if(statusRed == true){
+	$(function(){ 
+		$(".colorRed").addClass("onRed").removeClass("ofRed");
+		jsButtonRed.innerHTML = "<strong>RED ON</strong>";
+		jsResponse1.innerHTML = "RED-ON"; 
+	});	
+ }else{
+	$(function(){  
+		$(".colorRed").addClass("ofRed").removeClass("onRed"); 
+		jsButtonRed.innerHTML = "<strong>RED OFF</strong>";	
+		jsResponse1.innerHTML = "RED-OFF"; 
+	});
+ }
+
+ if(statusBlue == true){
+	$(function(){  
+		$(".colorBlue").addClass("onBlue").removeClass("ofBlue");
+		jsButtonBlue.innerHTML = "<strong>BLUE ON</strong>"; 
+		jsResponse2.innerHTML = "BLUE-ON";
+	});
+ }else{
+	$(function(){  
+		$(".colorBlue").addClass("ofBlue").removeClass("onBlue"); 
+		jsButtonBlue.innerHTML = "<strong>BLUE ON</strong>";
+		jsResponse2.innerHTML = "BLUE-OFF"; 
+	});	
+ }
+
+ if(statusGreen == true){
+	$(function(){  
+		$(".colorGreen").addClass("onGreen").removeClass("ofGreen");
+		jsButtonGreen.innerHTML = "<strong>GREEN ON</strong>"; 
+		jsResponse3.innerHTML = "GREEN-ON"; 
+	});	
+ }else{
+	$(function(){  
+		$(".colorGreen").addClass("ofGreen").removeClass("onGreen"); 
+		jsButtonGreen.innerHTML = "<strong>GREEN ON</strong>";
+		jsResponse3.innerHTML = "GREEN-OFF"; 
+	});	
+ }
+ 
+ 
+} /*function graphicsColorButtons()*/
+
+
+function btnRedOnOff(){
+if(statusRed == true){
+   statusRed = false;
+   graphicsColorButtons();
+}else{
+   statusRed = true;
+   graphicsColorButtons();
+}
+}
+
+function btnBlueOnOff(){
+if(statusBlue == true){
+   statusBlue = false;
+   graphicsColorButtons();
+}else{
+   statusBlue = true;
+   graphicsColorButtons();
+}
+}
+
+function btnGreenOnOff(){
+if(statusGreen == true){
+   statusGreen = false;
+   graphicsColorButtons();
+}else{
+   statusGreen = true;
+   graphicsColorButtons();
+}
+}
+
+
+</script>
+
+  </body>
+</html>
+
+
+
+
+
+
+
+
+

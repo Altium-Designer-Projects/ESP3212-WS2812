@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+
+</script>
+
+<style>
+
+.dashed-box { 
+  position: relative;
+  z-index: 1;
+  border: dashed;
+  width:500px;
+  height: 500px;
+  left: 60px;
+  top: 60px;
+  padding:25px;
+}
+
+.securityLayer{ 
+  position: absolute;
+  z-index: 1000; /* put .gold-box above .green-box and .dashed-box */
+  background: black;
+  width:250px;
+  height: 150px;
+  left: 60px;
+  top: 60px;
+  padding:25px;
+  opacity: 0.5;
+}
+
+
+</style>
+</head>
+<body>
+
+<div class="dashed-box">
+	<p>
+	Because the image has a z-index of -1, it will be placed behind the text.
+	 the content of the box. We have added a 50px padding, 20px margin and a 15px green bo
+	rder. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+	ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse c
+	illum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, su
+	nt in culpa qui officia deserunt mollit anim id est laborum.
+	Because the image has a z-index of -1, it will be placed behind the text.
+	 the content of the box. We have added a 50px padding, 20px margin and a 15px green bo
+	rder. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+	ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse c
+	illum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, su
+	nt in culpa qui officia deserunt mollit anim id est laborum.
+	</p>
+
+</div>
+
+
+<div class="securityLayer">
+
+
+  
+</div>
+
+
+
+</body>
+</html>

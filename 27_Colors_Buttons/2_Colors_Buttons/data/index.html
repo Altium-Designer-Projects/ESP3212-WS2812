@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>INDEX</title>
+
+<script src="js/jquery-3.4.1.min.js"></script>
+<link rel="stylesheet" href="css/bulma.min.css">
+<link rel="stylesheet" href="css/colors.css">
+<link rel="icon" href="data:,">
+
+<style>
+
+.myBlack{
+  background-color:black;  /* #363636  is-dark */
+}
+
+.is-footer{
+ background-color:#57606f;
+ color:black; 
+}
+
+.navbar > .container {
+  align-items: stretch;
+  display: flex;
+  min-height: 3.25rem;
+  width: 100%;
+  vertical-align: middle;  
+}
+
+
+.content-left{
+  display:flex;
+  justify-content:flex-end; 
+  vertical-align: middle;
+  margin-left: auto;
+}
+
+.content-right{
+  display:flex;
+  justify-content:flex-start; 
+  vertical-align: middle;  
+  padding-left:1.2em;
+}
+
+
+@media screen and (max-width: 1024px){
+ .runButton{
+   padding-right:1.2em;
+ }
+ 
+ .logo{
+   padding-left:0.4em;
+ }
+
+}
+
+@media screen and (min-width: 1024px){
+ .runButton{
+   padding-right:0px;
+ }
+ 
+ .logo{
+   padding-left:0px;
+ }
+
+}
+
+.button.is-large.is-fullwidth.eButton{
+ margin-top:10px;
+ margin-bottom:10px;
+ border:none; 
+ font-weight:700; 
+}
+
+.eButton.onButton{
+ box-shadow: 0 0px 0px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); 
+}
+
+.eButton.ofButton{
+ box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); 
+}
+
+@media screen and (max-width: 767px){
+ h1.bigText{
+  font-size:34px;
+  font-weight:500;
+  color:black;
+ }
+}
+
+@media screen and (min-width: 767px){
+ h1.bigText{
+  font-size:52px;
+  font-weight:700;
+  color:black;
+ }
+}
+
+.stopBtn{
+  font-weight:700;
+}
+
+</style>
+
+ 
+
+</head>  
+<body>
+	  
+<nav id="navbar" class="bd-navbar navbar is-fixed-top is-warning">
+  <div class="container">
+  
+	  <div class="navbar-item content-right">
+	   <p class="control logo">
+		 <a class="button is-medium is-black is-hidden-touch" href="https://www.altiumdesignerprojects.com" target="_blank"><strong>Altium Designer Projects</strong></a>
+		 <a class="button is-normal is-info is-hidden-desktop" href="https://www.altiumdesignerprojects.com" target="_blank"><strong>Altium Designer Projects</strong></a>
+	   </p>
+	  </div>
+
+
+	  <div class="navbar-item content-left">
+		<p class="control runButton">
+			<button class="button is-medium is-black is-hidden-touch stopBtn">STOP</button>
+			<button class="button is-normal is-info is-hidden-desktop stopBtn">STOP</button>
+		</p>
+	  </div>
+  </div>
+</nav>
+	
+
+
+  <section class="section">
+    <hr style="background-color: white;">
+    <div class="container">
+
+	  <div class="content has-text-centered">
+		  <h1 class="bigText">
+			ESP32 WEBSOCKETS WS2812B PROJECT
+		  </h1>
+	  </div>
+      <hr style="background-color: white;">
+	  
+		<div class="columns">
+		   <div class="column">
+		   
+			<div class="tile is-ancestor">
+			  <div class="tile is-vertical is-8">
+				<div class="tile">
+				  <div class="tile is-parent is-vertical">
+					
+					<article class="tile is-child notification is-primary">
+					  <p class="title">Effects</p>
+					  <p class="subtitle">With even more content</p>
+					</article>
+					
+					<article class="tile is-child notification is-warning">
+					  <p class="title">Effects</p>
+					  <p class="subtitle">With even more content</p>
+					</article>
+					
+					<article class="tile is-child notification is-danger">
+					  <p class="title">Effects</p>
+					  <p class="subtitle">With even more content</p>
+					</article>
+					
+					
+				  </div>
+				  
+				  <div class="tile is-parent">
+					<article class="tile is-child notification is-info">
+					  <p class="title">Effects</p>
+					  <p class="subtitle">With even more content</p>
+					  <div class="content">
+						<button class="button is-large is-fullwidth eButton ofButton">EFFECTS</button> 
+						<button class="button is-large is-fullwidth eButton ofButton">EFFECTS</button> 
+						<button class="button is-large is-fullwidth eButton ofButton">EFFECTS</button> 
+						<button class="button is-large is-fullwidth eButton ofButton">EFFECTS</button> 
+						<button class="button is-large is-fullwidth eButton ofButton">EFFECTS</button> 
+						<button class="button is-large is-fullwidth eButton ofButton">EFFECTS</button>  
+						<button class="button is-large is-fullwidth eButton ofButton">EFFECTS</button>  
+						<button class="button is-large is-fullwidth eButton ofButton">EFFECTS</button> 						
+						<button class="button is-large is-fullwidth eButton ofButton">EFFECTS</button> 						
+						<button class="button is-large is-fullwidth eButton ofButton">EFFECTS</button> 						
+					  </div>
+					</article>
+				  </div>
+				</div>
+				<div class="tile is-parent">
+				  <article class="tile is-child notification is-danger" style="background-color:#6500FF;">
+			    
+
+				
+				  </article>
+				</div>
+			  </div>
+			  <div class="tile is-parent">
+				<article class="tile is-child notification is-black">
+				  <div class="content">
+					<p class="title">Effects</p>
+					<p class="subtitle">With even more content</p>
+				    <!-- Content -->
+					<div class="content">
+					  	<button class="button is-large is-fullwidth btnColor colorRed" id="buttonRed" onclick="SocketSend1()">....</button>        <!-- RED  -->
+						<button class="button is-large is-fullwidth btnColor colorGreen" id="buttonGreen" onclick="SocketSend2()">....</button>    <!-- GREEN  -->
+					  	<button class="button is-large is-fullwidth btnColor colorBlue" id="buttonBlue" onclick="SocketSend3()">....</button>      <!-- BLUE  -->
+						<button class="button is-large is-fullwidth btnColor colorCyan" id="buttonCyan" onclick="SocketSend4()">....</button>      <!-- CYAN  -->
+						<button class="button is-large is-fullwidth btnColor colorPlum" id="buttonPlum" onclick="SocketSend5()">.......</button>   <!-- PLUM  -->
+						
+				
+						<button class="button is-large is-fullwidth btnColor colorCoral" id="buttonCoral" onclick="SocketSend6()">....</button>   <!-- CORAL  -->
+						<button class="button is-large is-fullwidth btnColor colorPurple" id="buttonPurple" onclick="SocketSend7()">....</button> <!-- PURPLE  -->
+					  	<button class="button is-large is-fullwidth btnColor colorYellow" id="buttonYellow" onclick="SocketSend8()">....</button>  <!-- YELLOW  -->
+						<button class="button is-large is-fullwidth btnColor colorSienna" id="buttonSienna" onclick="SocketSend9()">....</button>  <!-- SIENNA  -->
+						<button class="button is-large is-fullwidth btnColor colorMaroon" id="buttonMaroon" onclick="SocketSend10()">....</button>  <!-- MAROON  -->
+				
+						
+						<button class="button is-large is-fullwidth btnColor colorAmethyst" id="buttonAmethyst" onclick="SocketSend11()">....</button>  <!-- AMETHYST  -->
+						<button class="button is-large is-fullwidth btnColor colorBlueViolet" id="buttonBlueViolet" onclick="SocketSend12()">.....</button>  <!-- BLUE VIOLET  -->
+						<button class="button is-large is-fullwidth btnColor colorDarkViolet" id="buttonDarkViolet"  onclick="SocketSend13()">....</button>  <!-- DARK VIOLET  -->
+						<button class="button is-large is-fullwidth btnColor colorDarkOrange" id="buttonDarkOrange" onclick="SocketSend14()">....</button>   <!-- DARK ORANGE  -->
+						<button class="button is-large is-fullwidth btnColor colorDeepSkyBlue" id="buttonDeepSkyBlue" onclick="SocketSend15()">....</button>  <!-- DEEP SKY BLUE  -->
+						
+						<button class="button is-large is-fullwidth btnColor colorSpringGreen" id="buttonSpringGreen" onclick="SocketSend16()">.....</button>  <!-- SPRING GREEN  -->
+						<button class="button is-large is-fullwidth btnColor colorMediumOrchid" id="buttonMediumOrchid" onclick="SocketSend17()">....</button>  <!-- MediumOrchid -->
+						<button class="button is-large is-fullwidth btnColor colorMidnightBlue" id="buttonMidnightBlue" onclick="SocketSend18()">....</button>  <!-- MidnightBlue -->
+						<button class="button is-large is-fullwidth btnColor colorPaleVioletRed" id="buttonPaleVioletRed" onclick="SocketSend19()">.....</button><!-- PALE VIOLET RED  -->
+						<button class="button is-large is-fullwidth btnColor colorMediumVioletRed" id="buttonMediumVioletRed" onclick="SocketSend20()">.....</button><!-- MEDIUM VIOLET RED  -->
+			
+					</div>
+				  </div>
+				</article>
+			  </div>
+			</div>
+
+		   </div>
+		</div>
+    </div>
+	
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      <strong>ESP32 Websockets WS2812B Project</strong> by <a href="https://www.tosyaelectronics.com/" target="_blank">Vedat Baloglu</a>.
+	  The source code is licensed<a href="http://opensource.org/licenses/mit-license.php"> MIT</a>.<br>
+	  The website content is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+    </p>
+  </div>
+</footer> 
+	
+</section>
+
+<script>  
+
+var buttonStatus0; /* stop */
+var buttonStatus1; // buttonRed
+var buttonStatus2; // buttonGreen
+var buttonStatus3; // buttonBlue
+var buttonStatus4; // buttonCyan
+var buttonStatus5; // buttonPlum 
+
+var buttonStatus6; // buttonCoral
+var buttonStatus7; // buttonPurple
+var buttonStatus8; // buttonYellow
+var buttonStatus9; // buttonSienna
+var buttonStatus10; // buttonMaroon
+
+var buttonStatus11; // buttonAmethyst
+var buttonStatus12; // buttonBlueViolet
+var buttonStatus13; // buttonDarkViolet
+var buttonStatus14; // buttonDarkOrange
+var buttonStatus15; // buttonDeepSkyBlue
+
+var buttonStatus16; // buttonSpringGreen
+var buttonStatus17; // buttonMediumOrchid
+var buttonStatus18; // buttonMidnightBlue
+var buttonStatus19; // buttonPaleVioletRed
+var buttonStatus20; // buttonMediumVioletRed
+
+
+/*var colorButton0 = document.getElementById("buttonBlack");*/
+
+var url = 'ws://' + window.location.hostname + ':81/';
+
+function SocketInit(){    // This is called when the page finishes loading
+  wsConnect(url);         // Connect to WebSocket server
+  buttonGraphics();
+ 
+}
+
+function wsConnect(url){  // Call this to connect to the WebSocket server
+  websocket = new WebSocket(url);  // Connect to WebSocket server
+  // Assign callbacks
+  websocket.onopen    = function(event) { onOpen(event) };
+  websocket.onclose   = function(event) { onClose(event) };
+  websocket.onmessage = function(event) { onMessage(event) };
+  websocket.onerror   = function(event) { onError(event) };
+}
+
+function onOpen(event){             // Called when a WebSocket connection is established with the server
+  console.log("Connected");        // Log connection state
+}
+
+function onClose(event){             // Called when the WebSocket connection is closed
+  console.log("Disconnected");        // Log disconnection state
+  setTimeout(function() { wsConnect(url) }, 1000);       // Try to reconnect after a few seconds
+}
+
+function onMessage(event){   // Called when a message is received from the server
+  console.log("Received: " + event.data);
+
+   var obj = JSON.parse(event.data);
+  
+   if(obj.responseKey === "CLOSE"){ 
+      buttonGraphicsReset();
+      buttonGraphics();
+   }
+   
+   if(obj.responseKey === "RED"){ 
+      buttonGraphicsReset();
+      buttonStatus1 = true;
+      buttonGraphics();
+   }
+   
+   if(obj.responseKey === "GREEN"){ 
+      buttonGraphicsReset();
+      buttonStatus2 = true;
+      buttonGraphics();
+   }
+   
+   if(obj.responseKey === "BLUE"){ 
+      buttonGraphicsReset();
+	  buttonStatus3 = true;
+      buttonGraphics();
+   }
+
+   if(obj.responseKey === "CYAN"){ 
+      buttonGraphicsReset();
+      buttonStatus4 = true;
+      buttonGraphics();
+   }
+
+   if(obj.responseKey === "PLUM"){ 
+      buttonGraphicsReset();
+      buttonStatus5 = true;
+      buttonGraphics();
+   }
+ 
+   if(obj.responseKey === "CORAL"){ 
+      buttonGraphicsReset();
+      buttonStatus6 = true;
+      buttonGraphics();
+   }
+
+   if(obj.responseKey === "PURPLE"){
+      buttonGraphicsReset();	
+	  buttonStatus7 = true;
+      buttonGraphics();    
+   }
+   
+   
+   if(obj.responseKey === "YELLOW"){ 
+      buttonGraphicsReset();
+      buttonStatus8 = true;
+      buttonGraphics();
+   }
+   
+   if(obj.responseKey === "SIENNA"){ 
+      buttonGraphicsReset();
+	  buttonStatus9 = true;
+      buttonGraphics();
+   }
+   
+   if(obj.responseKey === "MAROON"){
+      buttonGraphicsReset();	
+	  buttonStatus10 = true;
+      buttonGraphics();    
+   }
+   
+   if(obj.responseKey === "AMETHYST"){ 
+      buttonGraphicsReset();	
+	  buttonStatus11 = true;
+      buttonGraphics();    
+   }
+
+   if(obj.responseKey === "BLUE-VIOLET"){
+      buttonGraphicsReset();	
+	  buttonStatus12 = true;
+      buttonGraphics();    
+   }
+   
+   if(obj.responseKey === "DARK-VIOLET"){
+      buttonGraphicsReset();	
+	  buttonStatus13 = true;
+      buttonGraphics();    
+   }
+   
+   if(obj.responseKey === "DARK-ORANGE"){
+      buttonGraphicsReset();	
+	  buttonStatus14 = true;
+      buttonGraphics();    
+   }  
+   
+   if(obj.responseKey === "DEEP-SKY-BLUE"){
+      buttonGraphicsReset();	
+	  buttonStatus15 = true;
+      buttonGraphics();    
+   }
+
+   if(obj.responseKey === "SPRING-GREEN"){
+      buttonGraphicsReset();
+	  buttonStatus16 = true;
+      buttonGraphics();    
+   }
+
+   if(obj.responseKey === "MEDIUM-ORCHID"){ 
+      buttonGraphicsReset();
+	  buttonStatus17 = true;
+      buttonGraphics();    
+   }
+   
+   if(obj.responseKey === "MIDNIGHT-BLUE"){ 
+      buttonGraphicsReset();
+	  buttonStatus18 = true;
+      buttonGraphics();    
+   }
+
+   if(obj.responseKey === "PALE-VIOLET-RED"){  
+      buttonGraphicsReset();	
+	  buttonStatus19 = true;
+      buttonGraphics();    
+   }
+   
+   if(obj.responseKey === "MEDIUM-VIOLET-RED"){
+      buttonGraphicsReset();	
+	  buttonStatus20 = true;
+      buttonGraphics();    
+   }
+
+   
+}
+
+function onError(event){      // Called when a WebSocket error occurs
+  console.log("ERROR: " + event.data);
+}
+
+window.addEventListener("load", SocketInit, false);  // Call the init function as soon as the page loads
+
+// ******************************************
+
+
+
+
+function SocketSend1(){
+ if(buttonStatus1 == false){
+    websocket.send("RED");  
+ }else{
+    websocket.send("CLOSE"); 
+ }
+}
+
+function SocketSend2(){
+ if(buttonStatus2 == false){
+    websocket.send("GREEN"); 
+ }else{
+    websocket.send("CLOSE"); 
+ }
+}
+
+function SocketSend3(){
+ if(buttonStatus3 == false){
+    websocket.send("BLUE"); 
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+
+function SocketSend4(){
+ if(buttonStatus4 == false){
+    websocket.send("CYAN"); 
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+
+function SocketSend5(){
+ if(buttonStatus5 == false){
+    websocket.send("PLUM"); 
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+
+function SocketSend6(){
+ if(buttonStatus6 == false){
+    websocket.send("CORAL");
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+
+function SocketSend7(){
+ if(buttonStatus7 == false){
+    websocket.send("PURPLE");
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+
+function SocketSend8(){
+ if(buttonStatus8 == false){
+    websocket.send("YELLOW");
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+
+function SocketSend9(){
+ if(buttonStatus9 == false){
+    websocket.send("SIENNA");
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+
+function SocketSend10(){
+ if(buttonStatus10 == false){
+    websocket.send("MAROON");
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+
+function SocketSend11(){
+ if(buttonStatus11 == false){
+    websocket.send("AMETHYST");
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+
+function SocketSend12(){
+ if(buttonStatus12 == false){
+    websocket.send("BLUE-VIOLET");
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+
+function SocketSend13(){
+ if(buttonStatus13 == false){
+    websocket.send("DARK-VIOLET");
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+
+function SocketSend14(){
+ if(buttonStatus14 == false){
+    websocket.send("DARK-ORANGE");
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+
+
+function SocketSend15(){
+ if(buttonStatus15 == false){
+    websocket.send("DEEP-SKY-BLUE");
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+
+
+function SocketSend16(){
+ if(buttonStatus16 == false){
+    websocket.send("SPRING-GREEN");
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+
+function SocketSend17(){
+ if(buttonStatus17 == false){
+    websocket.send("MEDIUM-ORCHID");
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+
+function SocketSend18(){
+ if(buttonStatus18 == false){
+    websocket.send("MIDNIGHT-BLUE");
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+
+function SocketSend19(){
+ if(buttonStatus19 == false){
+    websocket.send("PALE-VIOLET-RED");
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+
+function SocketSend20(){
+ if(buttonStatus20 == false){
+    websocket.send("MEDIUM-VIOLET-RED");
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+   
+
+/*   **********  **********   **********  ********   **************  */
+function buttonGraphics(){
+
+ if(buttonStatus1 == true){
+   $("#buttonRed").addClass("onRed").removeClass("ofRed");
+   document.getElementById("buttonRed").innerHTML = "RED ON";
+ }else{
+   $("#buttonRed").addClass("ofRed").removeClass("onRed");
+   document.getElementById("buttonRed").innerHTML = "RED OFF";
+ }
+
+ if(buttonStatus2 == true){
+   $("#buttonGreen").addClass("onGreen").removeClass("ofGreen");  
+   document.getElementById("buttonGreen").innerHTML = "GREEN ON";
+ }else{
+   $("#buttonGreen").addClass("ofGreen").removeClass("onGreen");
+   document.getElementById("buttonGreen").innerHTML = "GREEN OFF";
+ }
+
+ if(buttonStatus3 == true){
+   $("#buttonBlue").addClass("onBlue").removeClass("ofBlue");
+   document.getElementById("buttonBlue").innerHTML = "BLUE ON";
+ }else{
+   $("#buttonBlue").addClass("ofBlue").removeClass("onBlue");
+   document.getElementById("buttonBlue").innerHTML = "BLUE OFF";
+ } 
+
+ if(buttonStatus4 == true){
+   $("#buttonCyan").addClass("onCyan").removeClass("ofCyan");
+   document.getElementById("buttonCyan").innerHTML = "CYAN ON";
+ }else{
+   $("#buttonCyan").addClass("ofCyan").removeClass("onCyan");
+   document.getElementById("buttonCyan").innerHTML = "CYAN OFF";
+ }
+ 
+ if(buttonStatus5 == true){
+   $("#buttonPlum").addClass("onPlum").removeClass("ofPlum");  
+   document.getElementById("buttonPlum").innerHTML = "PLUM ON";
+ }else{
+   $("#buttonPlum").addClass("ofPlum").removeClass("onPlum");
+   document.getElementById("buttonPlum").innerHTML = "PLUM OFF";
+ }
+ 
+ if(buttonStatus6 == true){
+   $("#buttonCoral").addClass("onCoral").removeClass("ofCoral");
+   document.getElementById("buttonCoral").innerHTML = "CORAL ON";
+ }else{
+   $("#buttonCoral").addClass("ofCoral").removeClass("onCoral");
+   document.getElementById("buttonCoral").innerHTML = "CORAL OFF";
+ }
+ 
+ if(buttonStatus7 == true){
+   $("#buttonPurple").addClass("onPurple").removeClass("ofPurple");
+   document.getElementById("buttonPurple").innerHTML = "PURPLE ON";
+ }else{
+   $("#buttonPurple").addClass("ofPurple").removeClass("onPurple");
+   document.getElementById("buttonPurple").innerHTML = "PURPLE OFF";
+ }
+ 
+ if(buttonStatus8 == true){
+   $("#buttonYellow").addClass("onYellow").removeClass("ofYellow");
+   document.getElementById("buttonYellow").innerHTML = "YELLOW ON";
+ }else{
+   $("#buttonYellow").addClass("ofYellow").removeClass("onYellow");
+   document.getElementById("buttonYellow").innerHTML = "YELLOW OFF";
+ } 
+ 
+ if(buttonStatus9 == true){
+   $("#buttonSienna").addClass("onSienna").removeClass("ofSienna");
+   document.getElementById("buttonSienna").innerHTML = "SIENNA ON";
+ }else{
+   $("#buttonSienna").addClass("ofSienna").removeClass("onSienna");
+   document.getElementById("buttonSienna").innerHTML = "SIENNA OFF";
+ } 
+
+ if(buttonStatus10 == true){
+   $("#buttonMaroon").addClass("onMaroon").removeClass("ofMaroon");
+   document.getElementById("buttonMaroon").innerHTML = "MAROON ON";
+ }else{
+   $("#buttonMaroon").addClass("ofMaroon").removeClass("onMaroon");
+   document.getElementById("buttonMaroon").innerHTML = "MAROON OFF";
+ } 
+
+ if(buttonStatus11 == true){
+   $("#buttonAmethyst").addClass("onAmethyst").removeClass("ofAmethyst");
+   document.getElementById("buttonAmethyst").innerHTML = "AMETHYST ON";
+ }else{
+   $("#buttonAmethyst").addClass("ofAmethyst").removeClass("onAmethyst");
+   document.getElementById("buttonAmethyst").innerHTML = "AMETHYST OFF";
+ } 
+
+ if(buttonStatus12 == true){
+   $("#buttonBlueViolet").addClass("onBlueViolet").removeClass("ofBlueViolet");
+   document.getElementById("buttonBlueViolet").innerHTML = "BLUE VIOLET ON";
+ }else{
+   $("#buttonBlueViolet").addClass("ofBlueViolet").removeClass("onBlueViolet");
+   document.getElementById("buttonBlueViolet").innerHTML = "BLUE VIOLET OFF";
+ } 
+
+ if(buttonStatus13 == true){
+   $("#buttonDarkViolet").addClass("onDarkViolet").removeClass("ofDarkViolet");
+   document.getElementById("buttonDarkViolet").innerHTML = "DARK VIOLET ON";
+ }else{
+   $("#buttonDarkViolet").addClass("ofDarkViolet").removeClass("onDarkViolet");
+   document.getElementById("buttonDarkViolet").innerHTML = "DARK VIOLET OFF";
+ } 
+ 
+ if(buttonStatus14 == true){
+   $("#buttonDarkOrange").addClass("onDarkOrange").removeClass("ofDarkOrange");
+   document.getElementById("buttonDarkOrange").innerHTML = "DARK ORANGE ON";
+ }else{
+   $("#buttonDarkOrange").addClass("ofDarkOrange").removeClass("onDarkOrange");
+   document.getElementById("buttonDarkOrange").innerHTML = "DARK ORANGE OFF";
+ } 
+ 
+ if(buttonStatus15 == true){
+   $("#buttonDeepSkyBlue").addClass("onDeepSkyBlue").removeClass("ofDeepSkyBlue");
+   document.getElementById("buttonDeepSkyBlue").innerHTML = "DEEP SKY BLUE ON";
+ }else{
+   $("#buttonDeepSkyBlue").addClass("ofDeepSkyBlue").removeClass("onDeepSkyBlue");
+   document.getElementById("buttonDeepSkyBlue").innerHTML = "DEEP SKY BLUE OFF";
+ } 
+ 
+ if(buttonStatus16 == true){
+   $("#buttonSpringGreen").addClass("onSpringGreen").removeClass("ofSpringGreen");
+   document.getElementById("buttonSpringGreen").innerHTML = "SPRING GREEN ON";
+ }else{
+   $("#buttonSpringGreen").addClass("ofSpringGreen").removeClass("onSpringGreen");
+   document.getElementById("buttonSpringGreen").innerHTML = "SPRING GREEN OFF";
+ }
+ 
+ if(buttonStatus17 == true){
+   $("#buttonMediumOrchid").addClass("onMediumOrchid").removeClass("ofMediumOrchid");
+   document.getElementById("buttonMediumOrchid").innerHTML = "MEDIUM ORCHID ON";
+ }else{
+   $("#buttonMediumOrchid").addClass("ofMediumOrchid").removeClass("onMediumOrchid");
+   document.getElementById("buttonMediumOrchid").innerHTML = "MEDIUM ORCHID OFF";
+ }
+ 
+ if(buttonStatus18 == true){
+   $("#buttonMidnightBlue").addClass("onMidnightBlue").removeClass("ofMidnightBlue");
+   document.getElementById("buttonMidnightBlue").innerHTML = "MIDNIGHT BLUE ON";
+ }else{
+   $("#buttonMidnightBlue").addClass("ofMidnightBlue").removeClass("onMidnightBlue");
+   document.getElementById("buttonMidnightBlue").innerHTML = "MIDNIGHT BLUE OFF";
+ } 
+  
+ if(buttonStatus19 == true){
+   $("#buttonPaleVioletRed").addClass("onPaleVioletRed").removeClass("ofPaleVioletRed");
+   document.getElementById("buttonPaleVioletRed").innerHTML = "PALE VIOLET RED ON";
+ }else{
+   $("#buttonPaleVioletRed").addClass("ofPaleVioletRed").removeClass("onPaleVioletRed");
+   document.getElementById("buttonPaleVioletRed").innerHTML = "PALE VIOLET RED OFF";
+ } 
+
+ if(buttonStatus20 == true){
+   $("#buttonMediumVioletRed").addClass("onMediumVioletRed").removeClass("ofMediumVioletRed");  
+   document.getElementById("buttonMediumVioletRed").innerHTML = "MEDIUM VIOLET RED ON";
+ }else{
+   $("#buttonMediumVioletRed").addClass("ofMediumVioletRed").removeClass("onMediumVioletRed");
+   document.getElementById("buttonMediumVioletRed").innerHTML = "MEDIUM VIOLET RED OFF";
+ }
+
+
+ 
+} // button graphics son
+
+
+
+function buttonGraphicsReset(){
+    buttonStatus0 = false; /* stop */
+    buttonStatus1 = false; // buttonRed
+    buttonStatus2 = false; // buttonGreen
+    buttonStatus3 = false; // buttonBlue
+    buttonStatus4 = false; // buttonCyan
+    buttonStatus5 = false; // buttonPlum
+
+    buttonStatus6 = false; // buttonCoral
+    buttonStatus7 = false; // buttonPurple
+    buttonStatus8 = false; // buttonYellow
+    buttonStatus9 = false; // buttonSienna
+    buttonStatus10 = false; // buttonMaroon
+
+    buttonStatus11 = false; // buttonAmethyst
+    buttonStatus12 = false; // buttonBlueViolet
+    buttonStatus13 = false; // buttonDarkViolet
+    buttonStatus14 = false; // buttonDarkOrange
+    buttonStatus15 = false; // buttonDeepSkyBlue
+
+    buttonStatus16 = false; // buttonSpringGreen
+    buttonStatus17 = false; // buttonMediumOrchid
+    buttonStatus18 = false; // buttonMidnightBlue
+    buttonStatus19 = false; // buttonPaleVioletRed
+    buttonStatus20 = false; // buttonMediumVioletRed
+}  
+
+
+</script> 
+</body>
+</html>
+
+
+
+
+
+
+
+
+

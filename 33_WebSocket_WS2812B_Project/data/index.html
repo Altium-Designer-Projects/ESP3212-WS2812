@@ -1,0 +1,1573 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>INDEX</title>
+
+<script src="js/jquery-3.4.1.min.js"></script>
+<link rel="stylesheet" href="css/bulma.min.css">
+<link rel="stylesheet" href="css/colors.css">
+<link rel="icon" href="data:,">
+
+<style>
+
+.is-footer{
+  background-color:#57606f;
+  color:black; 
+}
+
+.navbar > .container {
+  align-items: stretch;
+  display: flex;
+  min-height: 3.25rem;
+  width: 100%;
+  vertical-align: middle;  
+}
+
+
+.content-left{
+  display:flex;
+  justify-content:flex-end; 
+  vertical-align: middle;
+  margin-left: auto;
+}
+
+.content-right{
+  display:flex;
+  justify-content:flex-start; 
+  vertical-align: middle;  
+  padding-left:1.2em;
+}
+
+
+@media screen and (max-width: 1024px){
+ .runButton{
+   padding-right:1.2em;
+ }
+ 
+ .logo{
+   padding-left:0.4em;
+ }
+
+}
+
+@media screen and (min-width: 1024px){
+ .runButton{
+   padding-right:0px;
+ }
+ 
+ .logo{
+   padding-left:0px;
+ }
+
+}
+
+.button.is-large.is-fullwidth.eButton{
+ margin-top:10px;
+ margin-bottom:10px;
+ margin-left:0px;
+ margin-right:0px; 
+ border :none; 
+ font-weight:700;
+}
+
+.eButton.onButton{
+ background-color:Silver;
+}
+
+.eButton.ofButton{
+ box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); 
+}
+
+@media screen and (max-width: 767px){
+ h1.bigText{
+  font-size:34px;
+  font-weight:500;
+  color:black;
+ }
+}
+
+@media screen and (min-width: 767px){
+ h1.bigText{
+  font-size:52px;
+  font-weight:700;
+  color:black;
+ }
+}
+
+.stopBtn{
+  font-weight:700;
+}
+
+</style>
+
+ 
+
+</head>  
+<body>
+	  
+<nav id="navbar" class="bd-navbar navbar is-fixed-top is-warning">
+  <div class="container">
+  
+	  <div class="navbar-item content-right">
+	   <p class="control logo">
+		 <a class="button is-medium is-black is-hidden-touch" href="https://www.altiumdesignerprojects.com" target="_blank"><strong>Altium Designer Projects</strong></a>
+		 <a class="button is-normal is-info is-hidden-desktop" href="https://www.altiumdesignerprojects.com" target="_blank"><strong>Altium Designer Projects</strong></a>
+	   </p>
+	  </div>
+  </div>
+</nav>
+	
+
+
+  <section class="section">
+    <hr style="background-color: white;">
+    <div class="container">
+
+	  <div class="content has-text-centered">
+		  <h1 class="bigText">
+			ESP32 WEBSOCKETS WS2812B PROJECT
+		  </h1>
+	  </div>
+      <hr style="background-color: white;">
+	  
+		<div class="columns">
+		   <div class="column">
+		   
+			<div class="tile is-ancestor">
+			  <div class="tile is-vertical is-8">
+				<div class="tile">
+				  <div class="tile is-parent is-vertical">
+					
+					<article class="tile is-child notification is-primary">
+					  <p class="title">Effects</p>
+					  <div class="content">
+				
+					  	<button class="button is-large is-fullwidth eButton" id="buttonEffects1" onclick="SocketSend21()">A</button>  <!--APPLAUSE -->
+						<button class="button is-large is-fullwidth eButton" id="buttonEffects2" onclick="SocketSend22()">A</button>  <!--BEADS -->
+						<button class="button is-large is-fullwidth eButton" id="buttonEffects3" onclick="SocketSend23()">A</button>  <!--BEATWAVE -->
+						<button class="button is-large is-fullwidth eButton" id="buttonEffects4" onclick="SocketSend24()">A</button>  <!--CHESSBOARD -->
+						<button class="button is-large is-fullwidth eButton" id="buttonEffects5" onclick="SocketSend25()">A</button>  <!--CONFETTI -->
+
+					  </div>					  
+					</article>
+					
+					<article class="tile is-child notification is-warning">
+					  <div class="content">
+					  <!-- Content -->
+						<button class="button is-large is-fullwidth eButton" id="buttonEffects6" onclick="SocketSend26()">A</button>  <!--CYLON -->
+						<button class="button is-large is-fullwidth eButton" id="buttonEffects7" onclick="SocketSend27()">A</button>  <!--DISCO-BALL -->
+						<button class="button is-large is-fullwidth eButton" id="buttonEffects8" onclick="SocketSend28()">A</button> <!--DOT-BEAT -->
+						<button class="button is-large is-fullwidth eButton" id="buttonEffects9" onclick="SocketSend29()">A</button> <!--DROPS -->
+						
+					  </div>
+					</article>
+					
+					<article class="tile is-child notification is-danger">
+					  <div class="content">
+					  <!-- Content -->
+					    <button class="button is-large is-fullwidth eButton" id="buttonEffects10" onclick="SocketSend30()">A</button> <!--FADE PALETTE -->
+						<button class="button is-large is-fullwidth eButton" id="buttonEffects11" onclick="SocketSend31()">A</button> <!--FLASH -->
+						<button class="button is-large is-fullwidth eButton" id="buttonEffects12" onclick="SocketSend32()">A</button> <!--GRADIENT -->
+						<button class="button is-large is-fullwidth eButton" id="buttonEffects13" onclick="SocketSend33()">A</button> <!--HEART BEAT -->
+						
+					  </div>
+					</article>
+				
+				  </div>
+				  
+				  <div class="tile is-parent">
+					<article class="tile is-child notification is-info"> 
+					  <div class="content">
+					  <!-- Content -->
+					    <button class="button is-large is-fullwidth eButton" id="buttonEffects14" onclick="SocketSend34()">A</button> <!--HSV-COLORS -->
+						<button class="button is-large is-fullwidth eButton" id="buttonEffects15" onclick="SocketSend35()">A</button> <!--JUGGLE -->
+						<button class="button is-large is-fullwidth eButton" id="buttonEffects16" onclick="SocketSend36()">A</button> <!--LAV-WAVE -->	 				  
+						<button class="button is-large is-fullwidth eButton" id="buttonEffects17" onclick="SocketSend37()">A</button> <!--METEOR -->					
+						<button class="button is-large is-fullwidth eButton" id="buttonEffects18" onclick="SocketSend38()">A</button> <!--MOVER -->					
+						<button class="button is-large is-fullwidth eButton" id="buttonEffects19" onclick="SocketSend39()">A</button> <!--MOVING-COLORS -->					  
+						<button class="button is-large is-fullwidth eButton" id="buttonEffects20" onclick="SocketSend40()">A</button> <!--NOISE -->
+						<button class="button is-large is-fullwidth eButton" id="buttonEffects21" onclick="SocketSend41()">A</button> <!--OCEAN -->
+						<button class="button is-large is-fullwidth eButton" id="buttonEffects22" onclick="SocketSend42()">A</button> <!--OVERLAY -->
+						<button class="button is-large is-fullwidth eButton" id="buttonEffects23" onclick="SocketSend43()">A</button> <!--CROSS-FADE -->
+						<button class="button is-large is-fullwidth eButton" id="buttonEffects24" onclick="SocketSend44()">A</button> <!--PARTY-WAVE -->
+						<button class="button is-large is-fullwidth eButton" id="buttonEffects25" onclick="SocketSend45()">A</button> <!--RAINBOW -->
+						<button class="button is-large is-fullwidth eButton" id="buttonEffects26" onclick="SocketSend46()">A</button> <!--SINELON -->
+						<button class="button is-large is-fullwidth eButton" id="buttonEffects27" onclick="SocketSend47()">A</button> <!--SNOWFALL -->						
+						<button class="button is-large is-fullwidth eButton" id="buttonEffects28" onclick="SocketSend48()">A</button> <!--SPARKLE -->						
+						<button class="button is-large is-fullwidth eButton" id="buttonEffects29" onclick="SocketSend49()">A</button> <!--VOLCANO -->						
+						<button class="button is-large is-fullwidth eButton" id="buttonEffects30" onclick="SocketSend50()">A</button> <!--WIZARD -->
+
+					  </div>
+					</article>
+				  </div>
+				</div>
+				<div class="tile is-parent">
+				  <article class="tile is-child notification is-danger" style="background-color:#6500FF;">
+			    
+
+				
+				  </article>
+				</div>
+			  </div>
+			  <div class="tile is-parent">
+				<article class="tile is-child notification is-black">
+				  <div class="content">
+					<p class="title">Colors</p>
+					<div class="content">
+				    <!-- Content -->
+					<div class="content">
+					  	<button class="button is-large is-fullwidth btnColor colorRed" id="buttonRed" onclick="SocketSend1()">....</button>        <!-- RED  -->
+						<button class="button is-large is-fullwidth btnColor colorGreen" id="buttonGreen" onclick="SocketSend2()">....</button>    <!-- GREEN  -->
+					  	<button class="button is-large is-fullwidth btnColor colorBlue" id="buttonBlue" onclick="SocketSend3()">....</button>      <!-- BLUE  -->
+						<button class="button is-large is-fullwidth btnColor colorCyan" id="buttonCyan" onclick="SocketSend4()">....</button>      <!-- CYAN  -->
+						<button class="button is-large is-fullwidth btnColor colorPlum" id="buttonPlum" onclick="SocketSend5()">.......</button>   <!-- PLUM  -->
+						
+				
+						<button class="button is-large is-fullwidth btnColor colorCoral" id="buttonCoral" onclick="SocketSend6()">....</button>   <!-- CORAL  -->
+						<button class="button is-large is-fullwidth btnColor colorPurple" id="buttonPurple" onclick="SocketSend7()">....</button> <!-- PURPLE  -->
+					  	<button class="button is-large is-fullwidth btnColor colorYellow" id="buttonYellow" onclick="SocketSend8()">....</button>  <!-- YELLOW  -->
+						<button class="button is-large is-fullwidth btnColor colorSienna" id="buttonSienna" onclick="SocketSend9()">....</button>  <!-- SIENNA  -->
+						<button class="button is-large is-fullwidth btnColor colorMaroon" id="buttonMaroon" onclick="SocketSend10()">....</button>  <!-- MAROON  -->
+				
+						
+						<button class="button is-large is-fullwidth btnColor colorAmethyst" id="buttonAmethyst" onclick="SocketSend11()">....</button>  <!-- AMETHYST  -->
+						<button class="button is-large is-fullwidth btnColor colorBlueViolet" id="buttonBlueViolet" onclick="SocketSend12()">.....</button>  <!-- BLUE VIOLET  -->
+						<button class="button is-large is-fullwidth btnColor colorDarkViolet" id="buttonDarkViolet"  onclick="SocketSend13()">....</button>  <!-- DARK VIOLET  -->
+						<button class="button is-large is-fullwidth btnColor colorDarkOrange" id="buttonDarkOrange" onclick="SocketSend14()">....</button>   <!-- DARK ORANGE  -->
+						<button class="button is-large is-fullwidth btnColor colorDeepSkyBlue" id="buttonDeepSkyBlue" onclick="SocketSend15()">....</button>  <!-- DEEP SKY BLUE  -->
+						
+						<button class="button is-large is-fullwidth btnColor colorSpringGreen" id="buttonSpringGreen" onclick="SocketSend16()">.....</button>  <!-- SPRING GREEN  -->
+						<button class="button is-large is-fullwidth btnColor colorMediumOrchid" id="buttonMediumOrchid" onclick="SocketSend17()">....</button>  <!-- MediumOrchid -->
+						<button class="button is-large is-fullwidth btnColor colorMidnightBlue" id="buttonMidnightBlue" onclick="SocketSend18()">....</button>  <!-- MidnightBlue -->
+						<button class="button is-large is-fullwidth btnColor colorPaleVioletRed" id="buttonPaleVioletRed" onclick="SocketSend19()">.....</button><!-- PALE VIOLET RED  -->
+						<button class="button is-large is-fullwidth btnColor colorMediumVioletRed" id="buttonMediumVioletRed" onclick="SocketSend20()">.....</button><!-- MEDIUM VIOLET RED  -->
+			
+					</div>					
+					</div>
+				  </div>
+				</article>
+			  </div>
+			</div>
+
+		   </div>
+		</div>
+    </div>
+	
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      <strong>ESP32 Websockets WS2812B Project</strong> by <a href="https://www.tosyaelectronics.com/" target="_blank">Vedat Baloglu</a>.
+	  The source code is licensed<a href="http://opensource.org/licenses/mit-license.php"> MIT</a>.<br>
+	  The website content is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+    </p>
+  </div>
+</footer> 
+	
+</section>
+
+<script>  
+
+var buttonStatus0; /* stop */
+var buttonStatus1; // buttonRed
+var buttonStatus2; // buttonGreen
+var buttonStatus3; // buttonBlue
+var buttonStatus4; // buttonCyan
+var buttonStatus5; // buttonPlum 
+
+var buttonStatus6; // buttonCoral
+var buttonStatus7; // buttonPurple
+var buttonStatus8; // buttonYellow
+var buttonStatus9; // buttonSienna
+var buttonStatus10; // buttonMaroon
+
+var buttonStatus11; // buttonAmethyst
+var buttonStatus12; // buttonBlueViolet
+var buttonStatus13; // buttonDarkViolet
+var buttonStatus14; // buttonDarkOrange
+var buttonStatus15; // buttonDeepSkyBlue
+
+var buttonStatus16; // buttonSpringGreen
+var buttonStatus17; // buttonMediumOrchid
+var buttonStatus18; // buttonMidnightBlue
+var buttonStatus19; // buttonPaleVioletRed
+var buttonStatus20; // buttonMediumVioletRed
+
+var buttonStatus21; // APPLAUSE
+var buttonStatus22; // BEADS
+var buttonStatus23; // BEATWAVE
+var buttonStatus24; // CHESSBOARD
+var buttonStatus25; // CONFETTI
+var buttonStatus26; // CYLON
+var buttonStatus27; // DISCO-BALL
+var buttonStatus28; // DOT-BEAT
+var buttonStatus29; // DROPS 
+var buttonStatus30; // FADE-PALETTE
+var buttonStatus31; // FLASH 
+var buttonStatus32; // GRADIENT
+var buttonStatus33; // HEART-BEAT
+var buttonStatus34; // HSV-COLORS
+var buttonStatus35; // JUGGLE
+var buttonStatus36; // LAV-WAVE
+var buttonStatus37; // METEOR
+var buttonStatus38; // MOVER
+var buttonStatus39; // MOVING-COLORS 
+var buttonStatus40; // NOISE
+var buttonStatus41; // OCEAN
+var buttonStatus42; // OVERLAY
+var buttonStatus43; // CROSS-FADE
+var buttonStatus44; // PARTY-WAVE
+var buttonStatus45; // RAINBOW 
+var buttonStatus46; // SINELON
+var buttonStatus47; // SNOWFALL
+var buttonStatus48; // SPARKLE
+var buttonStatus49; // VOLCANO
+var buttonStatus50; // WIZARD
+
+
+var url = 'ws://' + window.location.hostname + ':81/';
+
+function SocketInit(){    // This is called when the page finishes loading
+  wsConnect(url);         // Connect to WebSocket server
+  buttonGraphics();
+ 
+}
+
+function wsConnect(url){  // Call this to connect to the WebSocket server
+  websocket = new WebSocket(url);  // Connect to WebSocket server
+  // Assign callbacks
+  websocket.onopen    = function(event) { onOpen(event) };
+  websocket.onclose   = function(event) { onClose(event) };
+  websocket.onmessage = function(event) { onMessage(event) };
+  websocket.onerror   = function(event) { onError(event) };
+}
+
+function onOpen(event){             // Called when a WebSocket connection is established with the server
+  console.log("Connected");        // Log connection state
+}
+
+function onClose(event){             // Called when the WebSocket connection is closed
+  console.log("Disconnected");        // Log disconnection state
+  setTimeout(function() { wsConnect(url) }, 1000);       // Try to reconnect after a few seconds
+}
+
+function onMessage(event){   // Called when a message is received from the server
+  console.log("Received: " + event.data);
+
+   var obj = JSON.parse(event.data);
+  
+   if(obj.responseKey === "CLOSE"){ 
+      buttonGraphicsReset();
+      buttonGraphics();
+   }
+   
+   if(obj.responseKey === "RED"){ 
+      buttonGraphicsReset();
+      buttonStatus1 = true;
+      buttonGraphics();
+   }
+   
+   if(obj.responseKey === "GREEN"){ 
+      buttonGraphicsReset();
+      buttonStatus2 = true;
+      buttonGraphics();
+   }
+   
+   if(obj.responseKey === "BLUE"){ 
+      buttonGraphicsReset();
+	  buttonStatus3 = true;
+      buttonGraphics();
+   }
+
+	if(obj.responseKey === "CYAN"){ 
+      buttonGraphicsReset();
+      buttonStatus4 = true;
+      buttonGraphics();
+   }
+
+   if(obj.responseKey === "PLUM"){ 
+      buttonGraphicsReset();
+      buttonStatus5 = true;
+      buttonGraphics();
+   }
+ 
+   if(obj.responseKey === "CORAL"){ 
+      buttonGraphicsReset();
+      buttonStatus6 = true;
+      buttonGraphics();
+   }
+
+   if(obj.responseKey === "PURPLE"){
+      buttonGraphicsReset();	
+	  buttonStatus7 = true;
+      buttonGraphics();    
+   }
+   
+   
+   if(obj.responseKey === "YELLOW"){ 
+      buttonGraphicsReset();
+      buttonStatus8 = true;
+      buttonGraphics();
+   }
+   
+   if(obj.responseKey === "SIENNA"){ 
+      buttonGraphicsReset();
+	  buttonStatus9 = true;
+      buttonGraphics();
+   }
+   
+   if(obj.responseKey === "MAROON"){
+      buttonGraphicsReset();	
+	  buttonStatus10 = true;
+      buttonGraphics();    
+   }
+   
+   if(obj.responseKey === "AMETHYST"){ 
+      buttonGraphicsReset();	
+	  buttonStatus11 = true;
+      buttonGraphics();    
+   }
+
+   if(obj.responseKey === "BLUE-VIOLET"){
+      buttonGraphicsReset();	
+	  buttonStatus12 = true;
+      buttonGraphics();    
+   }
+   
+   if(obj.responseKey === "DARK-VIOLET"){
+      buttonGraphicsReset();	
+	  buttonStatus13 = true;
+      buttonGraphics();    
+   }
+   
+   if(obj.responseKey === "DARK-ORANGE"){
+      buttonGraphicsReset();	
+	  buttonStatus14 = true;
+      buttonGraphics();    
+   }  
+   
+   if(obj.responseKey === "DEEP-SKY-BLUE"){
+      buttonGraphicsReset();	
+	  buttonStatus15 = true;
+      buttonGraphics();    
+   }
+
+   if(obj.responseKey === "SPRING-GREEN"){
+      buttonGraphicsReset();
+	  buttonStatus16 = true;
+      buttonGraphics();    
+   }
+
+   if(obj.responseKey === "MEDIUM-ORCHID"){ 
+      buttonGraphicsReset();
+	  buttonStatus17 = true;
+      buttonGraphics();    
+   }
+   
+   if(obj.responseKey === "MIDNIGHT-BLUE"){ 
+      buttonGraphicsReset();
+	  buttonStatus18 = true;
+      buttonGraphics();    
+   }
+
+   if(obj.responseKey === "PALE-VIOLET-RED"){  
+      buttonGraphicsReset();	
+	  buttonStatus19 = true;
+      buttonGraphics();    
+   }
+   
+   if(obj.responseKey === "MEDIUM-VIOLET-RED"){
+      buttonGraphicsReset();	
+	  buttonStatus20 = true;
+      buttonGraphics();    
+   }
+   
+   
+   if(obj.responseKey === "APPLAUSE"){ 
+      buttonGraphicsReset();
+      buttonStatus21 = true;
+      buttonGraphics();
+   }
+   
+   if(obj.responseKey === "BEADS"){ 
+      buttonGraphicsReset();
+      buttonStatus22 = true;
+      buttonGraphics();
+   }
+
+   if(obj.responseKey === "BEATWAVE"){ 
+      buttonGraphicsReset();
+	  buttonStatus23 = true;
+      buttonGraphics();
+   }
+   
+   if(obj.responseKey === "CHESSBOARD"){ 
+      buttonGraphicsReset();
+	  buttonStatus24 = true;
+      buttonGraphics();
+   }
+   
+   if(obj.responseKey === "CONFETTI"){ 
+      buttonGraphicsReset();
+	  buttonStatus25 = true;
+      buttonGraphics();
+   }
+
+   if(obj.responseKey === "CYLON"){ 
+      buttonGraphicsReset();
+	  buttonStatus26 = true;
+      buttonGraphics();
+   }
+
+   if(obj.responseKey === "DISCO-BALL"){ 
+      buttonGraphicsReset();
+	  buttonStatus27 = true;
+      buttonGraphics();
+   }
+
+   if(obj.responseKey === "DOT-BEAT"){ 
+      buttonGraphicsReset();
+	  buttonStatus28 = true;
+      buttonGraphics();
+   }   
+
+   if(obj.responseKey === "DROPS"){
+      buttonGraphicsReset();
+	  buttonStatus29 = true;
+      buttonGraphics();
+   }
+
+   if(obj.responseKey === "FADE-PALETTE"){ 
+      buttonGraphicsReset();
+	  buttonStatus30 = true;
+      buttonGraphics();
+   } 
+   
+   if(obj.responseKey === "FLASH"){  
+      buttonGraphicsReset();
+	  buttonStatus31 = true;
+      buttonGraphics();
+   }
+
+   if(obj.responseKey === "GRADIENT"){ 
+      buttonGraphicsReset();
+	  buttonStatus32 = true;
+      buttonGraphics();
+   } 
+   
+   if(obj.responseKey === "HEART-BEAT"){ 
+      buttonGraphicsReset();
+	  buttonStatus33 = true;
+      buttonGraphics();
+   } 
+   
+   if(obj.responseKey === "HSV-COLORS"){ 
+      buttonGraphicsReset();
+	  buttonStatus34 = true;
+      buttonGraphics();
+   } 
+   
+   if(obj.responseKey === "JUGGLE"){ 
+      buttonGraphicsReset();
+	  buttonStatus35 = true;
+      buttonGraphics();
+   } 
+   
+   if(obj.responseKey === "LAV-WAVE"){ 
+      buttonGraphicsReset();
+	  buttonStatus36 = true;
+      buttonGraphics();
+   } 
+  
+   if(obj.responseKey === "METEOR"){ 
+      buttonGraphicsReset();
+	  buttonStatus37 = true;
+      buttonGraphics();
+   } 
+   
+   if(obj.responseKey === "MOVER"){ 
+      buttonGraphicsReset();
+	  buttonStatus38 = true;
+      buttonGraphics();
+   } 
+   
+   if(obj.responseKey === "MOVING-COLORS"){ 
+      buttonGraphicsReset();
+	  buttonStatus39 = true;
+      buttonGraphics();
+   } 
+   
+   if(obj.responseKey === "NOISE"){ 
+      buttonGraphicsReset();
+	  buttonStatus40 = true;
+      buttonGraphics();
+   } 
+
+   if(obj.responseKey === "OCEAN"){ 
+      buttonGraphicsReset();
+	  buttonStatus41 = true;
+      buttonGraphics();
+   } 
+   
+   if(obj.responseKey === "OVERLAY"){ 
+      buttonGraphicsReset();
+	  buttonStatus42 = true;
+      buttonGraphics();
+   } 
+   
+   if(obj.responseKey === "CROSS-FADE"){ 
+      buttonGraphicsReset();
+	  buttonStatus43 = true;
+      buttonGraphics();
+   } 
+   
+   if(obj.responseKey === "PARTY-WAVE"){ 
+      buttonGraphicsReset();
+	  buttonStatus44 = true;
+      buttonGraphics();
+   } 
+
+   if(obj.responseKey === "RAINBOW"){
+      buttonGraphicsReset();
+	  buttonStatus45 = true;
+      buttonGraphics();
+   } 
+   
+   if(obj.responseKey === "SINELON"){ 
+      buttonGraphicsReset();
+	  buttonStatus46 = true;
+      buttonGraphics();
+   } 
+   
+   if(obj.responseKey === "SNOWFALL"){ 
+      buttonGraphicsReset();
+	  buttonStatus47 = true;
+      buttonGraphics();
+   } 
+   
+   if(obj.responseKey === "SPARKLE"){ 
+      buttonGraphicsReset();
+	  buttonStatus48 = true;
+      buttonGraphics();
+   } 
+
+   if(obj.responseKey === "VOLCANO"){ 
+      buttonGraphicsReset();
+	  buttonStatus49 = true;
+      buttonGraphics();
+   } 
+   
+   if(obj.responseKey === "WIZARD"){ 
+      buttonGraphicsReset();
+	  buttonStatus50 = true;
+      buttonGraphics();
+   } 
+   
+}
+
+function onError(event){      // Called when a WebSocket error occurs
+  console.log("ERROR: " + event.data);
+}
+
+window.addEventListener("load", SocketInit, false);  // Call the init function as soon as the page loads
+
+// ******************************************
+
+function SocketSend1(){
+ if(buttonStatus1 == false){
+    websocket.send("RED");  
+ }else{
+    websocket.send("CLOSE"); 
+ }
+}
+
+function SocketSend2(){
+ if(buttonStatus2 == false){
+    websocket.send("GREEN"); 
+ }else{
+    websocket.send("CLOSE"); 
+ }
+}
+
+function SocketSend3(){
+ if(buttonStatus3 == false){
+    websocket.send("BLUE"); 
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+
+function SocketSend4(){
+ if(buttonStatus4 == false){
+    websocket.send("CYAN"); 
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+
+function SocketSend5(){
+ if(buttonStatus5 == false){
+    websocket.send("PLUM"); 
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+
+function SocketSend6(){
+ if(buttonStatus6 == false){
+    websocket.send("CORAL");
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+
+function SocketSend7(){
+ if(buttonStatus7 == false){
+    websocket.send("PURPLE");
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+
+function SocketSend8(){
+ if(buttonStatus8 == false){
+    websocket.send("YELLOW");
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+
+function SocketSend9(){
+ if(buttonStatus9 == false){
+    websocket.send("SIENNA");
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+
+function SocketSend10(){
+ if(buttonStatus10 == false){
+    websocket.send("MAROON");
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+
+function SocketSend11(){
+ if(buttonStatus11 == false){
+    websocket.send("AMETHYST");
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+
+function SocketSend12(){
+ if(buttonStatus12 == false){
+    websocket.send("BLUE-VIOLET");
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+
+function SocketSend13(){
+ if(buttonStatus13 == false){
+    websocket.send("DARK-VIOLET");
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+
+function SocketSend14(){
+ if(buttonStatus14 == false){
+    websocket.send("DARK-ORANGE");
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+
+function SocketSend15(){
+ if(buttonStatus15 == false){
+    websocket.send("DEEP-SKY-BLUE");
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+
+
+function SocketSend16(){
+ if(buttonStatus16 == false){
+    websocket.send("SPRING-GREEN");
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+
+function SocketSend17(){
+ if(buttonStatus17 == false){
+    websocket.send("MEDIUM-ORCHID");
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+
+function SocketSend18(){
+ if(buttonStatus18 == false){
+    websocket.send("MIDNIGHT-BLUE");
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+
+function SocketSend19(){
+ if(buttonStatus19 == false){
+    websocket.send("PALE-VIOLET-RED");
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+
+function SocketSend20(){
+ if(buttonStatus20 == false){
+    websocket.send("MEDIUM-VIOLET-RED");
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+
+function SocketSend21(){
+ if(buttonStatus21 == false){
+    websocket.send("APPLAUSE");   
+ }else{
+    websocket.send("CLOSE"); 
+ }
+}
+
+function SocketSend22(){
+ if(buttonStatus22 == false){
+    websocket.send("BEADS"); 
+ }else{
+    websocket.send("CLOSE");  
+ }
+}
+
+function SocketSend23(){
+ if(buttonStatus23 == false){
+    websocket.send("BEATWAVE");
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+
+
+function SocketSend24(){
+ if(buttonStatus24 == false){
+    websocket.send("CHESSBOARD");
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+
+function SocketSend25(){
+ if(buttonStatus25 == false){
+    websocket.send("CONFETTI");
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+
+function SocketSend26(){
+ if(buttonStatus26 == false){
+    websocket.send("CYLON");
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+
+function SocketSend27(){
+ if(buttonStatus27 == false){
+    websocket.send("DISCO-BALL");
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+
+function SocketSend28(){
+ if(buttonStatus28 == false){
+    websocket.send("DOT-BEAT");
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+
+function SocketSend29(){
+ if(buttonStatus29 == false){
+    websocket.send("DROPS");
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+
+function SocketSend30(){
+ if(buttonStatus30 == false){
+    websocket.send("FADE-PALETTE");
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+
+function SocketSend31(){
+ if(buttonStatus31 == false){
+    websocket.send("FLASH");
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+
+function SocketSend32(){
+ if(buttonStatus32 == false){
+    websocket.send("GRADIENT");
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+
+function SocketSend33(){
+ if(buttonStatus33 == false){
+    websocket.send("HEART-BEAT");
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+
+function SocketSend34(){
+ if(buttonStatus34 == false){
+    websocket.send("HSV-COLORS");
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+
+function SocketSend35(){
+ if(buttonStatus35 == false){
+    websocket.send("JUGGLE");
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+
+function SocketSend36(){
+ if(buttonStatus36 == false){
+    websocket.send("LAV-WAVE");
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+
+function SocketSend37(){
+ if(buttonStatus37 == false){
+    websocket.send("METEOR");
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+
+function SocketSend38(){
+ if(buttonStatus38 == false){
+    websocket.send("MOVER");
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+
+function SocketSend39(){
+ if(buttonStatus39 == false){
+    websocket.send("MOVING-COLORS");
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+
+function SocketSend40(){
+ if(buttonStatus40 == false){
+    websocket.send("NOISE");
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+
+function SocketSend41(){
+ if(buttonStatus41 == false){
+    websocket.send("OCEAN");
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+
+function SocketSend42(){
+ if(buttonStatus42 == false){
+    websocket.send("OVERLAY");
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+
+function SocketSend43(){
+ if(buttonStatus43 == false){
+    websocket.send("CROSS-FADE");
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+
+function SocketSend44(){
+ if(buttonStatus44 == false){
+    websocket.send("PARTY-WAVE");
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+
+function SocketSend45(){
+ if(buttonStatus45 == false){
+    websocket.send("RAINBOW");
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+
+function SocketSend46(){
+ if(buttonStatus46 == false){
+    websocket.send("SINELON");
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+
+function SocketSend47(){
+ if(buttonStatus47 == false){
+    websocket.send("SNOWFALL");
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+
+function SocketSend48(){
+ if(buttonStatus48 == false){
+    websocket.send("SPARKLE");
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+
+function SocketSend49(){
+ if(buttonStatus49 == false){
+    websocket.send("VOLCANO");
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+
+function SocketSend50(){
+ if(buttonStatus50 == false){
+    websocket.send("WIZARD");
+ }else{
+    websocket.send("CLOSE");
+ }
+}
+
+
+/* ********* ********* *********** *********** ************* */
+function buttonGraphics(){
+ if(buttonStatus1 == true){
+   $("#buttonRed").addClass("onRed").removeClass("ofRed");
+   document.getElementById("buttonRed").innerHTML = "RED";
+ }else{
+   $("#buttonRed").addClass("ofRed").removeClass("onRed");
+   document.getElementById("buttonRed").innerHTML = "RED";
+ }
+
+ if(buttonStatus2 == true){
+   $("#buttonGreen").addClass("onGreen").removeClass("ofGreen");  
+   document.getElementById("buttonGreen").innerHTML = "GREEN";
+ }else{
+   $("#buttonGreen").addClass("ofGreen").removeClass("onGreen");
+   document.getElementById("buttonGreen").innerHTML = "GREEN";
+ }
+
+ if(buttonStatus3 == true){
+   $("#buttonBlue").addClass("onBlue").removeClass("ofBlue");
+   document.getElementById("buttonBlue").innerHTML = "BLUE";
+ }else{
+   $("#buttonBlue").addClass("ofBlue").removeClass("onBlue");
+   document.getElementById("buttonBlue").innerHTML = "BLUE";
+ } 
+ 
+if(buttonStatus4 == true){
+   $("#buttonCyan").addClass("onCyan").removeClass("ofCyan");
+   document.getElementById("buttonCyan").innerHTML = "CYAN";
+ }else{
+   $("#buttonCyan").addClass("ofCyan").removeClass("onCyan");
+   document.getElementById("buttonCyan").innerHTML = "CYAN";
+ }
+ 
+ if(buttonStatus5 == true){
+   $("#buttonPlum").addClass("onPlum").removeClass("ofPlum");  
+   document.getElementById("buttonPlum").innerHTML = "PLUM";
+ }else{
+   $("#buttonPlum").addClass("ofPlum").removeClass("onPlum");
+   document.getElementById("buttonPlum").innerHTML = "PLUM";
+ }
+ 
+ if(buttonStatus6 == true){
+   $("#buttonCoral").addClass("onCoral").removeClass("ofCoral");
+   document.getElementById("buttonCoral").innerHTML = "CORAL";
+ }else{
+   $("#buttonCoral").addClass("ofCoral").removeClass("onCoral");
+   document.getElementById("buttonCoral").innerHTML = "CORAL";
+ }
+ 
+ if(buttonStatus7 == true){
+   $("#buttonPurple").addClass("onPurple").removeClass("ofPurple");
+   document.getElementById("buttonPurple").innerHTML = "PURPLE";
+ }else{
+   $("#buttonPurple").addClass("ofPurple").removeClass("onPurple");
+   document.getElementById("buttonPurple").innerHTML = "PURPLE";
+ }
+ 
+ if(buttonStatus8 == true){
+   $("#buttonYellow").addClass("onYellow").removeClass("ofYellow");
+   document.getElementById("buttonYellow").innerHTML = "YELLOW ON";
+ }else{
+   $("#buttonYellow").addClass("ofYellow").removeClass("onYellow");
+   document.getElementById("buttonYellow").innerHTML = "YELLOW OFF";
+ } 
+ 
+ if(buttonStatus9 == true){
+   $("#buttonSienna").addClass("onSienna").removeClass("ofSienna");
+   document.getElementById("buttonSienna").innerHTML = "SIENNA ON";
+ }else{
+   $("#buttonSienna").addClass("ofSienna").removeClass("onSienna");
+   document.getElementById("buttonSienna").innerHTML = "SIENNA OFF";
+ } 
+
+ if(buttonStatus10 == true){
+   $("#buttonMaroon").addClass("onMaroon").removeClass("ofMaroon");
+   document.getElementById("buttonMaroon").innerHTML = "MAROON ON";
+ }else{
+   $("#buttonMaroon").addClass("ofMaroon").removeClass("onMaroon");
+   document.getElementById("buttonMaroon").innerHTML = "MAROON OFF";
+ } 
+
+ if(buttonStatus11 == true){
+   $("#buttonAmethyst").addClass("onAmethyst").removeClass("ofAmethyst");
+   document.getElementById("buttonAmethyst").innerHTML = "AMETHYST ON";
+ }else{
+   $("#buttonAmethyst").addClass("ofAmethyst").removeClass("onAmethyst");
+   document.getElementById("buttonAmethyst").innerHTML = "AMETHYST OFF";
+ } 
+
+ if(buttonStatus12 == true){
+   $("#buttonBlueViolet").addClass("onBlueViolet").removeClass("ofBlueViolet");
+   document.getElementById("buttonBlueViolet").innerHTML = "BLUE VIOLET ON";
+ }else{
+   $("#buttonBlueViolet").addClass("ofBlueViolet").removeClass("onBlueViolet");
+   document.getElementById("buttonBlueViolet").innerHTML = "BLUE VIOLET OFF";
+ } 
+
+ if(buttonStatus13 == true){
+   $("#buttonDarkViolet").addClass("onDarkViolet").removeClass("ofDarkViolet");
+   document.getElementById("buttonDarkViolet").innerHTML = "DARK VIOLET ON";
+ }else{
+   $("#buttonDarkViolet").addClass("ofDarkViolet").removeClass("onDarkViolet");
+   document.getElementById("buttonDarkViolet").innerHTML = "DARK VIOLET OFF";
+ } 
+ 
+ if(buttonStatus14 == true){
+   $("#buttonDarkOrange").addClass("onDarkOrange").removeClass("ofDarkOrange");
+   document.getElementById("buttonDarkOrange").innerHTML = "DARK ORANGE ON";
+ }else{
+   $("#buttonDarkOrange").addClass("ofDarkOrange").removeClass("onDarkOrange");
+   document.getElementById("buttonDarkOrange").innerHTML = "DARK ORANGE OFF";
+ } 
+ 
+ if(buttonStatus15 == true){
+   $("#buttonDeepSkyBlue").addClass("onDeepSkyBlue").removeClass("ofDeepSkyBlue");
+   document.getElementById("buttonDeepSkyBlue").innerHTML = "DEEP SKY BLUE ON";
+ }else{
+   $("#buttonDeepSkyBlue").addClass("ofDeepSkyBlue").removeClass("onDeepSkyBlue");
+   document.getElementById("buttonDeepSkyBlue").innerHTML = "DEEP SKY BLUE OFF";
+ } 
+ 
+ if(buttonStatus16 == true){
+   $("#buttonSpringGreen").addClass("onSpringGreen").removeClass("ofSpringGreen");
+   document.getElementById("buttonSpringGreen").innerHTML = "SPRING GREEN ON";
+ }else{
+   $("#buttonSpringGreen").addClass("ofSpringGreen").removeClass("onSpringGreen");
+   document.getElementById("buttonSpringGreen").innerHTML = "SPRING GREEN OFF";
+ }
+ 
+ if(buttonStatus17 == true){
+   $("#buttonMediumOrchid").addClass("onMediumOrchid").removeClass("ofMediumOrchid");
+   document.getElementById("buttonMediumOrchid").innerHTML = "MEDIUM ORCHID ON";
+ }else{
+   $("#buttonMediumOrchid").addClass("ofMediumOrchid").removeClass("onMediumOrchid");
+   document.getElementById("buttonMediumOrchid").innerHTML = "MEDIUM ORCHID OFF";
+ }
+ 
+ if(buttonStatus18 == true){
+   $("#buttonMidnightBlue").addClass("onMidnightBlue").removeClass("ofMidnightBlue");
+   document.getElementById("buttonMidnightBlue").innerHTML = "MIDNIGHT BLUE ON";
+ }else{
+   $("#buttonMidnightBlue").addClass("ofMidnightBlue").removeClass("onMidnightBlue");
+   document.getElementById("buttonMidnightBlue").innerHTML = "MIDNIGHT BLUE OFF";
+ } 
+ 
+ if(buttonStatus19 == true){
+   $("#buttonPaleVioletRed").addClass("onPaleVioletRed").removeClass("ofPaleVioletRed");
+   document.getElementById("buttonPaleVioletRed").innerHTML = "PALE VIOLET RED ON";
+ }else{
+   $("#buttonPaleVioletRed").addClass("ofPaleVioletRed").removeClass("onPaleVioletRed");
+   document.getElementById("buttonPaleVioletRed").innerHTML = "PALE VIOLET RED OFF";
+ } 
+
+ if(buttonStatus20 == true){
+   $("#buttonMediumVioletRed").addClass("onMediumVioletRed").removeClass("ofMediumVioletRed");  
+   document.getElementById("buttonMediumVioletRed").innerHTML = "MEDIUM VIOLET RED ON";
+ }else{
+   $("#buttonMediumVioletRed").addClass("ofMediumVioletRed").removeClass("onMediumVioletRed");
+   document.getElementById("buttonMediumVioletRed").innerHTML = "MEDIUM VIOLET RED OFF";
+ }
+ 
+ if(buttonStatus21 == true){
+   $("#buttonEffects1").addClass("onButton").removeClass("ofButton");
+   document.getElementById("buttonEffects1").innerHTML = "APPLAUSE";  // APPLAUSE ON
+ }else{
+   $("#buttonEffects1").addClass("ofButton").removeClass("onButton");
+   document.getElementById("buttonEffects1").innerHTML = "APPLAUSE";  // APPLAUSE OFF
+ }
+
+ if(buttonStatus22 == true){
+   $("#buttonEffects2").addClass("onButton").removeClass("ofButton");
+   document.getElementById("buttonEffects2").innerHTML = "BEADS";
+ }else{
+   $("#buttonEffects2").addClass("ofButton").removeClass("onButton");
+   document.getElementById("buttonEffects2").innerHTML = "BEADS";  // BEADS
+ }
+
+ if(buttonStatus23 == true){
+   $("#buttonEffects3").addClass("onButton").removeClass("ofButton");
+   document.getElementById("buttonEffects3").innerHTML = "BEATWAVE"; 
+ }else{
+   $("#buttonEffects3").addClass("ofButton").removeClass("onButton");
+   document.getElementById("buttonEffects3").innerHTML = "BEATWAVE"; // BEATWAVE
+ }
+
+ if(buttonStatus24 == true){
+   $("#buttonEffects4").addClass("onButton").removeClass("ofButton");
+   document.getElementById("buttonEffects4").innerHTML = "CHESSBOARD"; 
+ }else{
+   $("#buttonEffects4").addClass("ofButton").removeClass("onButton");
+   document.getElementById("buttonEffects4").innerHTML = "CHESSBOARD"; // CHESSBOARD
+ }
+ 
+ if(buttonStatus25 == true){
+   $("#buttonEffects5").addClass("onButton").removeClass("ofButton");
+   document.getElementById("buttonEffects5").innerHTML = "CONFETTI"; 
+ }else{
+   $("#buttonEffects5").addClass("ofButton").removeClass("onButton");
+   document.getElementById("buttonEffects5").innerHTML = "CONFETTI"; // CONFETTI
+ } 
+
+ if(buttonStatus26 == true){
+   $("#buttonEffects6").addClass("onButton").removeClass("ofButton");
+   document.getElementById("buttonEffects6").innerHTML = "CYLON"; 
+ }else{
+   $("#buttonEffects6").addClass("ofButton").removeClass("onButton");
+   document.getElementById("buttonEffects6").innerHTML = "CYLON"; // CYLON
+ }
+ 
+ if(buttonStatus27 == true){
+   $("#buttonEffects7").addClass("onButton").removeClass("ofButton");
+   document.getElementById("buttonEffects7").innerHTML = "DISCO-BALL"; 
+ }else{
+   $("#buttonEffects7").addClass("ofButton").removeClass("onButton");
+   document.getElementById("buttonEffects7").innerHTML = "DISCO-BALL"; 
+ }
+ 
+ if(buttonStatus27 == true){
+   $("#buttonEffects7").addClass("onButton").removeClass("ofButton");
+   document.getElementById("buttonEffects7").innerHTML = "DISCO-BALL"; 
+ }else{
+   $("#buttonEffects7").addClass("ofButton").removeClass("onButton");
+   document.getElementById("buttonEffects7").innerHTML = "DISCO-BALL"; 
+ }
+ 
+ if(buttonStatus28 == true){
+   $("#buttonEffects8").addClass("onButton").removeClass("ofButton");
+   document.getElementById("buttonEffects8").innerHTML = "DOT-BEAT"; 
+ }else{
+   $("#buttonEffects8").addClass("ofButton").removeClass("onButton");
+   document.getElementById("buttonEffects8").innerHTML = "DOT-BEAT"; 
+ }
+ 
+ if(buttonStatus29 == true){
+   $("#buttonEffects9").addClass("onButton").removeClass("ofButton");
+   document.getElementById("buttonEffects9").innerHTML = "DROPS"; 
+ }else{
+   $("#buttonEffects9").addClass("ofButton").removeClass("onButton");
+   document.getElementById("buttonEffects9").innerHTML = "DROPS"; 
+ } 
+ 
+ if(buttonStatus30 == true){
+   $("#buttonEffects10").addClass("onButton").removeClass("ofButton");
+   document.getElementById("buttonEffects10").innerHTML = "FADE-PALETTE"; 
+ }else{
+   $("#buttonEffects10").addClass("ofButton").removeClass("onButton");
+   document.getElementById("buttonEffects10").innerHTML = "FADE-PALETTE"; 
+ } 
+
+ if(buttonStatus31 == true){
+   $("#buttonEffects11").addClass("onButton").removeClass("ofButton");
+   document.getElementById("buttonEffects11").innerHTML = "FLASH"; 
+ }else{
+   $("#buttonEffects11").addClass("ofButton").removeClass("onButton");
+   document.getElementById("buttonEffects11").innerHTML = "FLASH"; 
+ } 
+
+ if(buttonStatus32 == true){
+   $("#buttonEffects12").addClass("onButton").removeClass("ofButton");
+   document.getElementById("buttonEffects12").innerHTML = "GRADIENT"; 
+ }else{
+   $("#buttonEffects12").addClass("ofButton").removeClass("onButton");
+   document.getElementById("buttonEffects12").innerHTML = "GRADIENT"; 
+ } 
+
+ if(buttonStatus33 == true){
+   $("#buttonEffects13").addClass("onButton").removeClass("ofButton");
+   document.getElementById("buttonEffects13").innerHTML = "HEART-BEAT"; 
+ }else{
+   $("#buttonEffects13").addClass("ofButton").removeClass("onButton");
+   document.getElementById("buttonEffects13").innerHTML = "HEART-BEAT"; 
+ } 
+
+ if(buttonStatus33 == true){
+   $("#buttonEffects13").addClass("onButton").removeClass("ofButton");
+   document.getElementById("buttonEffects13").innerHTML = "HEART-BEAT"; 
+ }else{
+   $("#buttonEffects13").addClass("ofButton").removeClass("onButton");
+   document.getElementById("buttonEffects13").innerHTML = "HEART-BEAT"; 
+ } 
+
+ if(buttonStatus34 == true){
+   $("#buttonEffects14").addClass("onButton").removeClass("ofButton");
+   document.getElementById("buttonEffects14").innerHTML = "HSV-COLORS"; 
+ }else{
+   $("#buttonEffects14").addClass("ofButton").removeClass("onButton");
+   document.getElementById("buttonEffects14").innerHTML = "HSV-COLORS"; 
+ } 
+
+ if(buttonStatus35 == true){
+   $("#buttonEffects15").addClass("onButton").removeClass("ofButton");
+   document.getElementById("buttonEffects15").innerHTML = "JUGGLE"; 
+ }else{
+   $("#buttonEffects15").addClass("ofButton").removeClass("onButton");
+   document.getElementById("buttonEffects15").innerHTML = "JUGGLE"; 
+ } 
+
+ if(buttonStatus36 == true){
+   $("#buttonEffects16").addClass("onButton").removeClass("ofButton");
+   document.getElementById("buttonEffects16").innerHTML = "LAV-WAVE"; 
+ }else{
+   $("#buttonEffects16").addClass("ofButton").removeClass("onButton");
+   document.getElementById("buttonEffects16").innerHTML = "LAV-WAVE"; 
+ } 
+
+ if(buttonStatus37 == true){
+   $("#buttonEffects17").addClass("onButton").removeClass("ofButton");
+   document.getElementById("buttonEffects17").innerHTML = "METEOR"; 
+ }else{
+   $("#buttonEffects17").addClass("ofButton").removeClass("onButton");
+   document.getElementById("buttonEffects17").innerHTML = "METEOR"; 
+ } 
+
+ if(buttonStatus38 == true){
+   $("#buttonEffects18").addClass("onButton").removeClass("ofButton");
+   document.getElementById("buttonEffects18").innerHTML = "MOVER"; 
+ }else{
+   $("#buttonEffects18").addClass("ofButton").removeClass("onButton");
+   document.getElementById("buttonEffects18").innerHTML = "MOVER"; 
+ } 
+
+ if(buttonStatus39 == true){
+   $("#buttonEffects19").addClass("onButton").removeClass("ofButton");
+   document.getElementById("buttonEffects19").innerHTML = "MOVING-COLORS"; 
+ }else{
+   $("#buttonEffects19").addClass("ofButton").removeClass("onButton");
+   document.getElementById("buttonEffects19").innerHTML = "MOVING-COLORS"; 
+ } 
+
+ if(buttonStatus40 == true){
+   $("#buttonEffects20").addClass("onButton").removeClass("ofButton");
+   document.getElementById("buttonEffects20").innerHTML = "NOISE"; 
+ }else{
+   $("#buttonEffects20").addClass("ofButton").removeClass("onButton");
+   document.getElementById("buttonEffects20").innerHTML = "NOISE"; 
+ }
+
+ if(buttonStatus41 == true){
+   $("#buttonEffects21").addClass("onButton").removeClass("ofButton");
+   document.getElementById("buttonEffects21").innerHTML = "OCEAN"; 
+ }else{
+   $("#buttonEffects21").addClass("ofButton").removeClass("onButton");
+   document.getElementById("buttonEffects21").innerHTML = "OCEAN"; 
+ }
+ 
+ if(buttonStatus42 == true){
+   $("#buttonEffects22").addClass("onButton").removeClass("ofButton");
+   document.getElementById("buttonEffects22").innerHTML = "OVERLAY"; 
+ }else{
+   $("#buttonEffects22").addClass("ofButton").removeClass("onButton");
+   document.getElementById("buttonEffects22").innerHTML = "OVERLAY"; 
+ } 
+ 
+ if(buttonStatus43 == true){
+   $("#buttonEffects23").addClass("onButton").removeClass("ofButton");
+   document.getElementById("buttonEffects23").innerHTML = "CROSS-FADE"; 
+ }else{
+   $("#buttonEffects23").addClass("ofButton").removeClass("onButton");
+   document.getElementById("buttonEffects23").innerHTML = "CROSS-FADE"; 
+ }
+ 
+ if(buttonStatus44 == true){
+   $("#buttonEffects24").addClass("onButton").removeClass("ofButton");
+   document.getElementById("buttonEffects24").innerHTML = "PARTY-WAVE"; 
+ }else{
+   $("#buttonEffects24").addClass("ofButton").removeClass("onButton");
+   document.getElementById("buttonEffects24").innerHTML = "PARTY-WAVE"; 
+ } 
+ 
+ if(buttonStatus45 == true){
+   $("#buttonEffects25").addClass("onButton").removeClass("ofButton");
+   document.getElementById("buttonEffects25").innerHTML = "RAINBOW"; 
+ }else{
+   $("#buttonEffects25").addClass("ofButton").removeClass("onButton");
+   document.getElementById("buttonEffects25").innerHTML = "RAINBOW"; 
+ }
+ 
+ if(buttonStatus46 == true){
+   $("#buttonEffects26").addClass("onButton").removeClass("ofButton");
+   document.getElementById("buttonEffects26").innerHTML = "SINELON"; 
+ }else{
+   $("#buttonEffects26").addClass("ofButton").removeClass("onButton");
+   document.getElementById("buttonEffects26").innerHTML = "SINELON"; 
+ } 
+
+ if(buttonStatus47 == true){
+   $("#buttonEffects27").addClass("onButton").removeClass("ofButton");
+   document.getElementById("buttonEffects27").innerHTML = "SNOWFALL"; 
+ }else{
+   $("#buttonEffects27").addClass("ofButton").removeClass("onButton");
+   document.getElementById("buttonEffects27").innerHTML = "SNOWFALL"; 
+ }
+ 
+ if(buttonStatus48 == true){
+   $("#buttonEffects28").addClass("onButton").removeClass("ofButton");
+   document.getElementById("buttonEffects28").innerHTML = "SPARKLE"; 
+ }else{
+   $("#buttonEffects28").addClass("ofButton").removeClass("onButton");
+   document.getElementById("buttonEffects28").innerHTML = "SPARKLE"; 
+ }
+
+ if(buttonStatus49 == true){
+   $("#buttonEffects29").addClass("onButton").removeClass("ofButton");
+   document.getElementById("buttonEffects29").innerHTML = "VOLCANO"; 
+ }else{
+   $("#buttonEffects29").addClass("ofButton").removeClass("onButton");
+   document.getElementById("buttonEffects29").innerHTML = "VOLCANO"; 
+ }
+ 
+ if(buttonStatus50 == true){
+   $("#buttonEffects30").addClass("onButton").removeClass("ofButton");
+   document.getElementById("buttonEffects30").innerHTML = "WIZARD"; 
+ }else{
+   $("#buttonEffects30").addClass("ofButton").removeClass("onButton");
+   document.getElementById("buttonEffects30").innerHTML = "WIZARD"; 
+ }
+ 
+ 
+} // button graphics son
+
+
+
+function buttonGraphicsReset(){
+  buttonStatus0 = false; /* stop */
+  buttonStatus1 = false; // buttonRed
+  buttonStatus2 = false; // buttonGreen
+  buttonStatus3 = false; // buttonBlue
+  buttonStatus4 = false; // buttonCyan
+  buttonStatus5 = false; // buttonPlum
+
+  buttonStatus6 = false; // buttonCoral
+  buttonStatus7 = false; // buttonPurple
+  buttonStatus8 = false; // buttonYellow
+  buttonStatus9 = false; // buttonSienna
+  buttonStatus10 = false; // buttonMaroon
+
+  buttonStatus11 = false; // buttonAmethyst
+  buttonStatus12 = false; // buttonBlueViolet
+  buttonStatus13 = false; // buttonDarkViolet
+  buttonStatus14 = false; // buttonDarkOrange
+  buttonStatus15 = false; // buttonDeepSkyBlue
+
+  buttonStatus16 = false; // buttonSpringGreen
+  buttonStatus17 = false; // buttonMediumOrchid
+  buttonStatus18 = false; // buttonMidnightBlue
+  buttonStatus19 = false; // buttonPaleVioletRed
+  buttonStatus20 = false; // buttonMediumVioletRed
+  
+  buttonStatus21 = false; // APPLAUSE
+  buttonStatus22 = false; // BEADS
+  buttonStatus23 = false; // BEATWAVE
+  buttonStatus24 = false; // CHESSBOARD
+  buttonStatus25 = false; // CONFETTI
+  buttonStatus26 = false; // CYLON
+  buttonStatus27 = false; // DISCO-BALL
+  buttonStatus28 = false; // DOT-BEAT
+  buttonStatus29 = false; // DROPS 
+  buttonStatus30 = false; // FADE-PALETTE
+  buttonStatus31 = false; // FLASH 
+  buttonStatus32 = false; // GRADIENT
+  buttonStatus33 = false; // HEART-BEAT
+  buttonStatus34 = false; // HSV-COLORS
+  buttonStatus35 = false; // JUGGLE
+  buttonStatus36 = false; // LAV-WAVE
+  buttonStatus37 = false; // METEOR
+  buttonStatus38 = false; // MOVER
+  buttonStatus39 = false; // MOVING-COLORS 
+  buttonStatus40 = false; // NOISE
+  buttonStatus41 = false; // OCEAN
+  buttonStatus42 = false; // OVERLAY
+  buttonStatus43 = false; // CROSS-FADE
+  buttonStatus44 = false; // PARTY-WAVE
+  buttonStatus45 = false; // RAINBOW 
+  buttonStatus46 = false; // SINELON
+  buttonStatus47 = false; // SNOWFALL
+  buttonStatus48 = false; // SPARKLE
+  buttonStatus49 = false; // VOLCANO
+  buttonStatus50 = false; // WIZARD
+}  
+
+
+</script> 
+</body>
+</html>
+
+
+
+
+
+
+
+
+

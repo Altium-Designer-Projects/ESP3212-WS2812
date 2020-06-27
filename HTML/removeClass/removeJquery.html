@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ESP32 Web Server</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<style>
+
+body{
+ height:800px;
+ margin-left:auto;
+ margin-right:auto;
+ background:#ECF0F1;
+ font-family:Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
+ text-align:center;
+}
+  
+h1{
+ font-family:"Segoe UI";
+ font-size:40px;
+ font-style:normal;
+ font-variant:normal;
+ font-weight:600;
+ line-height:34px;
+} 
+
+h2{
+ font-family:"Segoe UI";
+ font-size:28px;
+ font-style:normal;
+ font-variant:normal;
+ font-weight:400;
+ line-height:28px;
+} 
+
+p{
+ font-family:"Segoe UI";
+ font-size:12px;
+ font-style:normal;
+ font-variant:normal;
+ font-weight:400;
+ line-height:14px;
+} 
+
+.button{
+ width:350px;
+ border:none;
+ border-radius:8px;
+ color: white;
+ outline: none;
+ padding: 48px 48px;
+ text-align: center;
+ text-decoration: none;
+ display: inline-block;
+ font-family:"Century Gothic";
+ font-size:32px;
+ font-style:normal;
+ font-variant:normal;
+ font-weight:600;
+ line-height:28px;
+ margin:20px 8px;-webkit-transition-duration:0.4s;/* Safari */transition-duration:0.4s;
+ cursor:pointer;
+}
+
+.button_on{
+ background-color:#008CBA;
+ color:white;
+}
+
+.button_on:hover{
+ background-color:#e7e7e7;
+ color:black;
+}
+
+.button_off{
+ background-color:e7e7e7;
+ color:black;
+ box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}  
+
+.button_off:hover{
+ background-color:#008CBA;
+ color:white;
+}
+
+
+</style>
+</head>
+<body>
+
+<br><br>
+<h1>ARDUINO ESP32 WEBSOCKET RELAY</h1>
+<br>
+
+<button class="button" id="webButton1">RELAY 1 ON</button><br>
+<button class="button button_off" id="webButton2">RELAY 2 OFF</button><br>
+
+<br>
+
+<button onclick="btn_on()">BTN ON</button>
+<button onclick="btn_off()">BTN OFF</button>
+
+<script>
+
+let jsButton1 = document.getElementById("webButton1");
+let jsRelayStatus0;
+
+
+function buttonGraphics_0(){ 
+ if(jsRelayStatus0 == true){
+   jsButton1.innerHTML = "RELAY 1 ON";
+   $(function(){  
+     $("#webButton1").removeClass("button_off").addClass("button_on");
+   });
+ }else{
+   jsButton1.innerHTML = "RELAY 1 OFF";
+   $(function(){  
+     $("#webButton1").removeClass("button_on").addClass("button_off");
+   });
+ }
+}
+
+
+function btn_on(){
+   jsRelayStatus0 = true;
+   buttonGraphics_0();
+}
+
+function btn_off() {
+   jsRelayStatus0 = false;
+   buttonGraphics_0();
+}
+
+
+</script>
+
+</body>
+</html>
+
+
+

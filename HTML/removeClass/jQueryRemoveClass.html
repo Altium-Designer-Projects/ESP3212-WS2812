@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<style>
+
+.blue {
+  width:250px;
+  height:250px;
+  background-color: grey; 
+  color: blue;
+  border: 1px solid blue;
+  padding:50px;
+  
+}
+
+</style>
+</head>
+<body>
+
+<button id="addBtn">ADD</button>  <button id="removeBtn">REMOVE</button> <br><br><br>
+
+
+<div class="blueDiv">This is some important text!</div><br>
+
+<script>
+$(document).ready(function(){
+  $("#addBtn").click(function(){
+    $(".blueDiv").addClass("blue");
+  });
+});
+
+$(document).ready(function(){
+  $("#removeBtn").click(function(){
+    $(".blueDiv").removeClass("blue");  
+  });
+});
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

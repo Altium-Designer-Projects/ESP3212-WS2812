@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LAYER</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<style>
+
+.button.is-large.is-fullwidth.btnColor{
+ margin-top:10px;
+ margin-bottom:10px;
+ margin-left:0px;
+ margin-right:0px;
+}
+
+.button.is-large.is-fullwidth.btnEffects{
+ margin-top:10px;
+ margin-bottom:10px;	  
+ background-color:inherit;	  
+}
+ 
+strong.colorstext{
+ margin-top:10px;
+ margin-bottom:10px;
+ font-size:16px;
+ padding:3px;
+}
+
+#pink{
+ position: absolute;
+ z-index:5; 
+ /*background-color: pink;*/
+ align-content: center;
+ opacity: 0.6;
+ align-content: center;
+}
+
+.securityLayer{
+ z-index: 100; 
+ margin: auto;
+ background: black;
+ opacity: 0.6;
+ margin-top:20px;
+}
+
+.is-footer{
+ background-color:#57606f;
+ color:black; 
+}
+
+.content-left{
+  display:flex;
+  justify-content:flex-end; 
+  vertical-align: middle;
+  margin-left: auto;
+}
+
+.navbar > .container {
+  align-items: stretch;
+  display: flex;
+  min-height: 3.25rem;
+  width: 100%;
+  vertical-align: middle;  
+}
+
+@media screen and (max-width: 1020px) {
+ .runButton{
+   padding-right:1.2em;
+   top:4px;   
+ }
+ 
+ .myLogo{
+   padding-left:1em;
+ }
+
+}
+
+
+@media screen and (max-width: 600px) {
+ .runButton{
+   padding-right:1.2em;
+   top:4px;
+ }
+ 
+ .myLogo{
+   padding-left:1em;
+ }
+
+}
+
+</style>
+
+<script>  
+
+function test(){
+
+securityControl();
+
+var x = 0;
+$(document).ready(function(){
+  $(window).resize(function(){
+    securityControl();
+	windowsInnerWidth();
+    $(".resizeSpan").text(x += 1);
+	 
+  });
+});
+
+function windowsInnerWidth(){
+  var w = window.innerWidth;
+  var h = window.innerHeight;
+  document.getElementById("windowWrite").innerHTML = "Width: " + w + "<br>Height: " + h;
+}
+
+}
+
+function securityControl(){ 
+
+/*
+var documentWidth=$(document).width();
+var documentHeight=$(document).height();
+document.getElementById("demoDoc").innerHTML = documentWidth + " .... " + documentHeight;
+*/
+
+
+var readSectionWidth=$(document).width();
+var readSectionHeight=$(document).height();
+
+$("#pink").width(readSectionWidth);
+$("#pink").height(readSectionHeight);
+
+document.getElementById("demo").innerHTML = readSectionWidth + " .. " + readSectionHeight;
+
+var readContainerWidth=$("#readContainer").width();
+var readContainerHeight=$("#readContainer").height();
+
+$("#fadeDiv").width(readContainerWidth+50);
+$("#fadeDiv").height(readContainerHeight+20);
+
+document.getElementById("demoDoc").innerHTML = readContainerWidth + " .. " + readContainerHeight;
+
+} 
+
+
+function deviceOn(){
+	$(function(){
+	  $("#fadeDiv").fadeIn(500);
+	  $("#pink").fadeIn(500);	  
+	});
+} 
+
+function deviceOff(){
+	$(function(){
+	  $("#fadeDiv").fadeOut(500);
+	  $("#pink").fadeOut(500);	  
+	});
+}
+
+
+</script>
+
+</head>
+<body onload="test()">
+
+<nav id="navbar" class="bd-navbar navbar is-warning is-fixed-top">
+  <div class="container">
+	  <div class="navbar-item">
+		<p class="control siteLogo">
+			<a class="navbar-item" href="#">
+				<img src="https://bulma.io/images/bulma-logo.png" alt="" width="112" height="28">
+			</a>
+		</p>
+	  </div>
+  
+	  <div class="navbar-item content-left">
+		<p class="control runButton" style="margin-left:15px; margin-right:15px;">
+			<button class="button is-medium is-black" onclick="deviceOn()"><strong>FADE IN</strong></button>
+		</p>
+		<p class="control runButton">
+			<button class="button is-medium is-black" onclick="deviceOff()"><strong>FADE OUT</strong></button>
+		</p>	
+	  </div>
+  </div>
+</nav>
+
+<hr>
+
+
+<div id="pink">
+<div id="fadeDiv" class="securityLayer"></div>
+</div>
+
+
+<section class="section" id="readSection">
+ <div class="container" id="readContainer">
+		<div class="columns">
+		   <div class="column">
+		   
+			<div class="tile is-ancestor">
+			  <div class="tile is-vertical is-8">
+				<div class="tile">
+				  <div class="tile is-parent is-vertical">
+					
+					<article class="tile is-child notification is-primary">  
+					  <h1 class="title"><span class="resizeSpan">0</span></h1>
+					  <h1 class="title"><span id="windowWrite">0</span></h1>
+					</article>
+					
+					<article class="tile is-child notification is-warning">
+					  <p class="title" id="demo">...</p>
+					  <p class="title" id="demoDoc">...</p>
+					  <p class="subtitle">Bottom tile</p>
+					</article>
+				  </div>
+				  
+				  <div class="tile is-parent">
+					<article class="tile is-child notification is-info">
+					  <p class="title">Effects</p>
+					  <p class="subtitle">With even more content</p>
+					  <div class="content">
+					  <!-- Content -->
+						<button class="button is-large is-fullwidth btnEffects"><strong>RED ON</strong></button> 
+						<button class="button is-large is-fullwidth btnEffects"><strong>RED OFF</strong></button>  
+						<button class="button is-large is-fullwidth btnEffects">Large</button>
+						<button class="button is-large is-fullwidth btnEffects">Large</button>  
+						<button class="button is-large is-fullwidth btnEffects">Large</button>
+						<button class="button is-large is-fullwidth btnEffects">Large</button>  
+						<button class="button is-large is-fullwidth btnEffects">Large</button>
+						<button class="button is-large is-fullwidth btnEffects">Large</button>
+
+					  </div>
+					</article>
+				  </div>
+				</div>
+				<div class="tile is-parent">
+				  <article class="tile is-child notification is-primary">
+			    
+					<div class="columns is-mobile is-gapless">
+					<div class="column">
+						<p class="title">Color Slider</p>
+						<strong class="colorstext">R:255</strong>
+						<strong class="colorstext">G:255</strong>
+						<strong class="colorstext">B:255</strong> 
+					</div>
+
+					<div class="column">
+
+					</div>					  
+					</div>
+				
+					<div class="content">
+
+						
+					</div>
+				
+				  </article>
+				</div>
+			  </div>
+			  <div class="tile is-parent">
+				<article class="tile is-child notification is-black">
+				  <div class="content">
+					<p class="title">Effects</p>
+					<p class="subtitle">With even more content</p>
+					<div class="content">
+					  <!-- Content -->
+					  	<button class="button is-large is-fullwidth btnColor colorRed onRed"><strong>RED ON</strong></button>
+						<button class="button is-large is-fullwidth btnColor colorRed ofRed"><strong>RED OFF</strong></button>  
+						<button class="button is-large is-fullwidth btnColor">Large</button>
+						<button class="button is-large is-fullwidth btnColor">Large</button>  
+						<button class="button is-large is-fullwidth btnColor">Large</button>
+						<button class="button is-large is-fullwidth btnColor">Large</button>  
+						<button class="button is-large is-fullwidth btnColor">Large</button>
+						<button class="button is-large is-fullwidth btnColor">Large</button> 
+						<button class="button is-large is-fullwidth btnColor">Large</button>
+						<button class="button is-large is-fullwidth btnColor">Large</button>  
+						<button class="button is-large is-fullwidth btnColor">Large</button>
+						<button class="button is-large is-fullwidth btnColor">Large</button> 						
+					</div>
+				  </div>
+				</article>
+			  </div>
+			</div>
+
+		   </div>
+		</div>
+		
+    <div class="container">
+		<div class="columns">
+		  <div class="column">
+			<div class="content has-text-centered">
+				<article class="tile is-child notification is-footer">
+				<p class="title">Vedat Baloğlu</p>
+				<p class="subtitle">Tosya Electronics</p>
+				</article>
+				<br>
+				<p>
+				  <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
+				  <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+				  is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+				</p> 
+			</div>
+		  </div>
+		</div>
+    </div>	
+ </div>
+</section>
+
+<!-- 
+<div id="mainContent">  
+
+</div>
+-->
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
